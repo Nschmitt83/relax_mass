@@ -1,0 +1,2 @@
+class MasseursController < ApplicationController
+end
