@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= cl_image_tag("chat1_newsq9", height: 80, width: 90)%>
+  <% end %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <div class="navbar-nav align-items-md-center ">
+      <%= link_to "Qui sommes nous?", "#", class: "text-dark nav-item" %>
+        <% if user_signed_in? %>
+          <p class="mb-0 font-weight-bold mr-2 text-dark nav-item">
+            Salut <%= link_to current_user.first_name.capitalize, profil_path(current_user), class: "text-dark" %> !
+          </p>
+          <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "btn btn-outline-primary nav-item" %>
+        <% else %>
+          <%= link_to "Se connecter / créer un compte", new_user_session_path ,class: "btn btn-outline-primary nav-item" %>
+        <% end %>
+    </div>
+  </div>
+</nav>

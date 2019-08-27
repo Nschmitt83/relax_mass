@@ -1,3 +1,4 @@
+
 puts "Destroy"
 Review.destroy_all
 Booking.destroy_all
@@ -20,7 +21,6 @@ nicolas = User.create!(
 url0 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566898699/maillot-homme-classique_gfdo28.jpg"
 nicolas.remote_avatar_url = url0
 nicolas.save!
-
 
 marie = User.create!(
   email: "marie@gmail.com",
@@ -226,7 +226,4 @@ bret  = User.create!(
 url12 = "https://i2.wp.com/diacritik.com/wp-content/uploads/2015/12/543fdee652147_-_tnc-bret-easton-ellis-lg.jpg?fit=1024%2C512&ssl=1"
 bret.remote_avatar_url = url12
 bret.save!
-
-
-
 
