@@ -1,0 +1,20 @@
+<div class="navbar sticky-top navbar-light bg-white">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= cl_image_tag ("chat2_zpakrx" )%>
+  <% end %>
+  <div class="d-flex">
+    <p><%= link_to "Qui sommes nous?", "#" %></p>
+    <div class="ml-5">
+      <% if user_signed_in? %>
+      <div class="d-flex justify-content-between">
+        <p class="mb-0 font-weight-bold mr-2"> Salut
+          <%= link_to current_user.first_name.capitalize, profil_path(current_user) %> !</p>
+
+          <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "btn btn-outline-primary " %>
+      </div>
+      <% else %>
+        <%= link_to "Se connecter / créer un compte", new_user_registration_path ,class: "btn btn-outline-primary my-2 my-sm-0 mx-3" %>
+      <% end %>
+    </div>
+  </div>
+</div>
