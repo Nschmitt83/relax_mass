@@ -1,1 +1,18 @@
-_masseur_card.html.erb
+<div class="card" style="width: 22rem;">
+  <div class="card-body">
+    <div class="d-flex align-items-center">
+      <%= image_tag "maxresdefault.jpg", class: "avatar-large" %>
+      <div>
+        <h5 class="card-title"><%= masseur.first_name %> <%= masseur.last_name %></h5>
+        <% masseur.massages.each do |massage| %>
+          <ul>
+            <li><%= massage.massage_type %></li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
