@@ -70,7 +70,7 @@ simone  = User.create!(
   mass_or_not: true,
 )
 
-url3 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566901490/Marguerite-Yourcenar_auvq5n.png"
+url3 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566909264/736535_jianlb.jpg.jpg"
 simone.remote_photo_url = url3
 simone.save!
 
@@ -87,7 +87,7 @@ george  = User.create!(
   mass_or_not: true,
 )
 
-url4 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566901490/Marguerite-Yourcenar_auvq5n.png"
+url4 = "https://img-4.linternaute.com/dST2et5eqVwPmhI0d0Dl8WRtozs=/1240x/smart/e7c81af39fae4c12a7be569523fbc1ce/ccmcms-linternaute/10983819.png"
 george.remote_photo_url = url4
 george.save!
 
@@ -104,7 +104,7 @@ francoise  = User.create!(
   mass_or_not: true,
 )
 
-url5 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566901490/Marguerite-Yourcenar_auvq5n.png"
+url5 = "https://static1.purepeople.com/articles/6/31/18/16/@/4414541-francoise-sagan-950x0-3.jpg"
 francoise.remote_photo_url = url5
 francoise.save!
 
@@ -121,7 +121,7 @@ zelda  = User.create!(
   mass_or_not: true,
 )
 
-url6 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566901490/zelda-Yourcenar_auvq5n.png"
+url6 = "https://www.deslettres.fr/wp-content/uploads/2015/08/zelda.jpg"
 zelda.remote_photo_url = url6
 zelda.save!
 
@@ -138,7 +138,7 @@ comtesse  = User.create!(
   mass_or_not: true,
 )
 
-url7 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566901490/comtesse-Yourcenar_auvq5n.png"
+url7 = "http://www.mamanvogue.fr/wp-content/uploads/2016/02/segur-740x500.png"
 comtesse.remote_photo_url = url7
 comtesse.save!
 
@@ -155,7 +155,7 @@ andre  = User.create!(
   mass_or_not: true,
 )
 
-url8 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566901490/andre-Yourcenar_auvq5n.png"
+url8 = "http://i-exc.ccm2.net/iex/1280/2070937017/744032.jpg"
 andre.remote_photo_url = url8
 andre.save!
 
@@ -172,7 +172,7 @@ charles  = User.create!(
   mass_or_not: true,
 )
 
-url9 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566901490/charles-Yourcenar_auvq5n.png"
+url9 = "http://lesmoutonsrebelles.com/wp-content/uploads/2016/08/charles-bukowski-hulton-getty.jpg"
 charles.remote_photo_url = url9
 charles.save!
 
@@ -189,7 +189,7 @@ michel  = User.create!(
   mass_or_not: true,
 )
 
-url10 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v156610014100/michel-Yourcenar_auvq5n.png"
+url10 = "https://www.revuedesdeuxmondes.fr/wp-content/uploads/2015/10/150126_r26055-1200-630-15112701-1024x538.jpg"
 michel.remote_photo_url = url10
 michel.save!
 
@@ -206,7 +206,7 @@ albert  = User.create!(
   mass_or_not: true,
 )
 
-url11 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v156610014100/albert-Yourcenar_auvq5n.png"
+url11 = "http://i-exc.ccm2.net/iex/1280/2062425379/746509.jpg"
 albert.remote_photo_url = url11
 albert.save!
 
@@ -223,7 +223,7 @@ bret  = User.create!(
   mass_or_not: true,
 )
 
-url12 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v156610014100/bret-Yourcenar_auvq5n.png"
+url12 = "https://i2.wp.com/diacritik.com/wp-content/uploads/2015/12/543fdee652147_-_tnc-bret-easton-ellis-lg.jpg?fit=1024%2C512&ssl=1"
 bret.remote_photo_url = url12
 bret.save!
 
