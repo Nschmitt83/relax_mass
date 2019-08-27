@@ -1,6 +1,8 @@
 MASSAGE_PRICE_AND_TYPE = {
   "Massage Suedois" => {
-    price: 50
+    price: 50,
+    description: "",
+    photo: "",
   },
   "Massage californien" => {
     price: 45
