@@ -1,1 +1,19 @@
-_massage_card_large
+<h1>TEMPLATES CARTES MASSAGE</h1>
+
+<% MASSAGE_PRICE_AND_TYPE.each do |massage, v| %>
+  <div class="card mb-3" style="max-width: 900px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <%= cl_image_tag v[:photo],height: 250, width:280 %>
+      </div>
+      <div class="col-md-8" style="max-height: 250px;">
+        <div class="card-body">
+          <h5 class="row card-title"><%= massage %></h5>
+          <p class="row card-text"><small class="text-muted"><%= v[:description] %></p></small></p>
+          <p class="row card-text"><small>Durée : 1 heure</small></p>
+          <p class="row card-text"><strong>Prix : <%= v[:price] %> €</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
