@@ -1,1 +1,29 @@
 // Specific CSS for your home-page
+.banner {
+  background-color: white;
+}
+
+.project-intro {
+  color: $green;
+  h2 {
+    padding-bottom: 1rem;
+  }
+}
+
+.massage-types {
+  background-color: $green;
+  h2 {
+    padding-bottom: 1rem;
+    color: white;
+  }
+}
+
+#finder_card {
+  background-color: $grey-green;
+  margin-right: -3rem;
+}
+
+#white_card {
+  border-radius: 0px;
+  border-style: none;
+}
