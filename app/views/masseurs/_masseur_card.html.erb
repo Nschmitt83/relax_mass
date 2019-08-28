@@ -18,7 +18,14 @@
     <p class="card-text"><%= masseur.description %></p>
     <div class="d-flex justify-content-between">
       <p>Ville: <%= masseur.city %></p>
-      <p>Rating : <% 5.times do %> <i class="fa fa-star gold text-primary"></i><% end %></p>
+      <% average = masseur.reviews.sum(&:rating) / masseur.reviews.size.to_f %>
+      <p>
+         Note :
+        <% average.round.times do %> <i class="fa fa-star gold text-primary"></i>
+        <% end %>
+        <% (5 - average).round.times do %> <i class="far fa-star gold text-primary"></i>
+        <% end %>
+      </p>
     </div>
   </div>
 </div>

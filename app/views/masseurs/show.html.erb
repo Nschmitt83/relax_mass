@@ -1,30 +1,20 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-10 p-0">
-      <%= render 'masseur_card_large', user: @masseur%>
-      <div class="row">
-        <div class="col-6 col-lg-5">
-          <div class="row">
-            <%= render 'massages/massages_prices' %>
-          </div>
-          <div class="row">
-            <%= render 'description_masseur_card', user: @masseur %>
-          </div>
-        </div>
-        <div class="col-6 col-lg-5">
-          <div class="card">
-            <h2>Reservez votre massage</h2>
-            <p class="text-center" >Choisissez la date et l'heure:</p>
-            <%= render 'bookings/form_add_booking.html' %>
-          </div>
-        </div>
-        <div class="col-6 col-lg-5">
-          <%= render 'reviews/reviews_card', reviews: @reviews %>
-        </div>
-        <div class="col-6 col-lg-5 d-flex justify-content-end align-items-end">
-          <%= link_to "Retour à la liste", masseurs_path, class: "btn btn-outline-success"  %>
-        </div>
+<div class="container-massage">
+  <%= render 'masseur_card_large', user: @masseur%>
+  <div class="row">
+    <div class="col-6 d-flex flex-column justify-content-between">
+        <%= render 'massages/massages_prices'%>
+        <%= render 'description_masseur_card', user: @masseur %>
+        <%= render 'reviews/reviews_card', reviews: @reviews %>
+    </div>
+    <div class="col-6">
+      <div class="card">
+        <h2 class="text-center">Réservez votre massage</h2>
+        <p class="text-center" >Choisissez la date et l'heure:</p>
+        <%= render 'bookings/form_add_booking' %>
       </div>
+    </div>
+    <div class=" w-100 d-flex justify-content-end">
+      <%= link_to "Retour à la liste", masseurs_path, class: "btn btn-outline-success m-3"  %>
     </div>
   </div>
 </div>
