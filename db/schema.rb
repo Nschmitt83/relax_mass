@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2019_08_26_155521) do
     t.string "gender"
     t.boolean "mass_or_not", default: false
     t.string "diploma"
+    t.string "siret"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
