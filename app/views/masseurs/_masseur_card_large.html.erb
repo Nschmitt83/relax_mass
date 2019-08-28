@@ -1,1 +1,14 @@
-
+<div class="card large">
+  <div class="card-body d-flex justify-content-between">
+    <%= cl_image_tag "#{user.avatar}", crop: :fill, height: 100, width: 100, class: "avatar-large m-3" %>
+    <div class="flex-grow-1">
+      <h2 class="card-title"><%= user.first_name %> <%= user.last_name %></h2>
+      <ul class="card-text massage_list">
+        <li><strong>Adresse:</strong> <%= user.address %></li>
+        <li><strong>Ville:</strong> <%= user.ZIP_code %> <%= user.city %></li>
+        <li><strong>Email:</strong> <%= user.email %></li>
+      </ul>
+    </div>
+    <p>Rating : <% 5.times do %> <i class="fa fa-star gold text-success"></i><% end %></p>
+  </div>
+</div>

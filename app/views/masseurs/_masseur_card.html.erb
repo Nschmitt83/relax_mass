@@ -1,18 +1,24 @@
-<div class="card" style="width: 22rem;">
+<div class="card" >
   <div class="card-body">
     <div class="d-flex align-items-center">
-      <%= image_tag "maxresdefault.jpg", class: "avatar-large" %>
+      <%#= link_to (masseur_path(masseur.id)), class: "text-dark"do %>
+        <%= cl_image_tag "#{masseur.avatar}",crop: :fill, height: 100, width: 100, class: "avatar-large" %>
+      <%#=end %>
       <div>
         <h5 class="card-title"><%= masseur.first_name %> <%= masseur.last_name %></h5>
-        <% masseur.massages.each do |massage| %>
-          <ul>
+        <% unless masseur.massages.empty? %>
+          <ul class="massage_list">
+          <% masseur.massages.each do |massage| %>
             <li><%= massage.massage_type %></li>
+          <% end %>
           </ul>
         <% end %>
       </div>
     </div>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <p class="card-text"><%= masseur.description %></p>
+    <div class="d-flex justify-content-between">
+      <p>Ville: <%= masseur.city %></p>
+      <p>Rating : <% 5.times do %> <i class="fa fa-star gold text-success"></i><% end %></p>
+    </div>
   </div>
 </div>
