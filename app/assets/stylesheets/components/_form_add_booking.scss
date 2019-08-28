@@ -1,0 +1,21 @@
+.flatpickr-months .flatpickr-month {
+  background-color: $green !important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months{
+  background-color: $green !important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months > option{
+  background-color: $green !important;
+}
+
+.flatpickr-weekdays{
+  background-color: $green !important;
+  color: white !important;
+}
+
+.flatpickr-weekdaycontainer > .flatpickr-weekday{
+  background-color: $green !important;
+  color: white !important;
+}

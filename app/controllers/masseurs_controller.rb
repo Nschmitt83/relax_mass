@@ -7,5 +7,6 @@ class MasseursController < ApplicationController
   def show
     @masseur = User.find(params[:id])
     @reviews = @masseur.reviews
+    @booking = Booking.new
   end
 end

@@ -1,0 +1,7 @@
+<div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+  <h2>Reservez votre massage</h2>
+  <%= simple_form_for :booking, method: "get" do |f| %>
+    <%= f.input :start_date, as: :string, required: false, input_html: {id: "datepicker",class: "d-none"} %>
+    <%= f.button :submit, "Valider", class: "btn btn-info " %>
+  <% end %>
+</div>
