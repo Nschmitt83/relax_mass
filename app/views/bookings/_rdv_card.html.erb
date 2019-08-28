@@ -1,0 +1,21 @@
+<div class="card" id="rdv_card" >
+  <div class="card-body">
+    <div class="d-flex justify-content-center mb-5">
+      <h1>PROCHAIN RDV</h1>
+    </div>
+    <div class="rdv-intro mx-3">
+      <p>
+        Vous avez rendez-vous le <strong>jj/mm/aaaa</strong> à <strong>hh:mm</strong> pour un <strong>massage_type</strong>
+      </p>
+    <p>Avec :</p>
+    </div>
+    <div class="d-flex justify-content-center">
+    <%= render 'masseurs/masseur_card', masseur: @masseur %>
+    </div>
+    <div class="d-flex justify-content-center">
+      <%= link_to "Annuler", masseur_path, class: "btn btn-outline-success mr-3" %>
+      <%= link_to "Confirmer", profil_path, class: "btn btn-info ml-3" %>
+    </div>
+
+  </div>
+</div>
