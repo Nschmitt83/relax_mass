@@ -235,7 +235,7 @@ massages1 = Massage.create!(
 )
 
 massages2 = Massage.create!(
-  massage_type: "Massage californien",
+  massage_type: "Massage Californien",
   user: marguerite
 )
 
