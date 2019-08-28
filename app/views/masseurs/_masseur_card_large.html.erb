@@ -3,12 +3,19 @@
     <%= cl_image_tag "#{user.avatar}", crop: :fill, height: 100, width: 100, class: "avatar-large m-3" %>
     <div class="flex-grow-1">
       <h2 class="card-title"><%= user.first_name %> <%= user.last_name %></h2>
-      <ul class="card-text massage_list">
-        <li><strong>Adresse:</strong> <%= user.address %></li>
-        <li><strong>Ville:</strong> <%= user.ZIP_code %> <%= user.city %></li>
-        <li><strong>Email:</strong> <%= user.email %></li>
-      </ul>
+      <div class="d-flex">
+        <ul class="card-text massage_list mr-2">
+          <li><strong>Ville: </strong></li>
+          <li><strong>Email: </strong></li>
+          <li><strong>SIRET: </strong></li>
+        </ul>
+        <ul class="card-text massage_list">
+          <li> <%= user.ZIP_code %> <%= user.city %></li>
+          <li> <%= user.email %></li>
+          <li>12345678910121354 <%#= user.siret %></li>
+        </ul>
+      </div>
     </div>
-    <p>Rating : <% 5.times do %> <i class="fa fa-star gold text-success"></i><% end %></p>
+    <p>Rating : <% 5.times do %> <i class="fa fa-star gold text-primary"></i><% end %></p>
   </div>
 </div>

@@ -1,10 +1,10 @@
- <div class="notification">
+ <div class="notification w-50">
   <div class="notification-content">
-    <div class="notif_title">
-      <h4>De < Username > </h4>
-      <p>Rating : <% 5.times do %> <i class="fa fa-star gold text-success"></i><% end %></p>
+    <div class="notif_title d-flex justify-content-between">
+      <h5>De <%= review.user.first_name %> <%= review.user.last_name %> </h5>
+      <p><% 5.times do %> <i class="fa fa-star gold text-primary"></i><% end %></p>
     </div>
-    <p>Lorem ipsum dolor sit amet,adipisicing elit.</p>
+    <p><%= review.content %></p>
   </div>
 
   <!-- <div class="notification-actions">
