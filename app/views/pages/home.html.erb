@@ -1,2 +1,44 @@
-<%= render 'massages/massage_card_large'%>
-<%= render 'massages/massages_prices'%>
+
+<div class="banner">
+  <div class="d-flex justify-content-center">
+    <div class="card justify-content-center align-items-end" id="white_card" style="width: 450px">
+      <div class="card d-flex justify-content-around pt-4 px-3" id="finder_card" style="width: 400px; height: 400px;">
+        <h2>J’ai pas envie de me déplacer... <strong>Relax Mass'</strong> me trouve un massothérapeute à domicile :</h2>
+
+          <%= simple_form_for :masseur, method: "get" do |f| %>
+            <%= f.input :massage_type, prompt: "Type de massage", label:false , collection: MASSAGE_PRICE_AND_TYPE.keys%>
+             <%= f.input :city, placeholder: 'Ma ville', label:false %>
+            <%= f.submit "Rechercher", class: "btn btn-info my-3" %>
+          <% end %>
+
+      </div>
+    </div>
+    <div class="illustration">
+      <%= cl_image_tag("massage_01_cjguia", width: 600, crop: :fill) %>
+    </div>
+  </div>
+</div>
+
+<div class="project-intro">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 py-4">
+        <h2>Comment ça marche ?</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="massage-types">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 py-4">
+        <h2>Types de massage</h2>
+        <%= render 'massages/massage_card_large'%>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
