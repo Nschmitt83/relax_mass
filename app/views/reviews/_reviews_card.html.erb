@@ -1,4 +1,5 @@
-<div class="notifications_all">
+<div class="notifications_all card">
+  <h2>Avis</h2>
   <% reviews.each do |review| %>
     <%= render 'reviews/reviews_details_card', review: review %>
   <% end %>
