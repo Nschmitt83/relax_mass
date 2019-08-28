@@ -2,6 +2,9 @@ class MasseursController < ApplicationController
   def index
     @masseurs = User.where(mass_or_not: true)
     @reviews = @masseurs.map(&:reviews)
+    @massages = Massage.all
+    @massages = Massage.all
+
   end
 
   def show
