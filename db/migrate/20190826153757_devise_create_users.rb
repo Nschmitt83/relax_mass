@@ -42,6 +42,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :gender
       t.boolean :mass_or_not, default: false
       t.string :diploma
+      t.string :siret
 
       t.timestamps null: false
     end
