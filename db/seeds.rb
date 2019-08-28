@@ -48,7 +48,7 @@ marguerite  = User.create!(
   address: "3, avenue léopold 2",
   ZIP_code: "75001",
   city: "Paris",
-  description:"Salut à tous et à toutes, c'est moi Marguerite. J'écris un peu pour arrondir les fins de mois et suis sinon masseuse depuis 10 ans. J'adore mon métier! Look forward to see you guys",
+  description:"Salut à tous et à toutes, c'est moi Marguerite. J'écris un peu pour arrondir les fins de mois et suis sinon masseuse depuis 10 ans. J'adore mon métier! Look forward to see you guys !",
   gender: "femme",
   mass_or_not: true,
 )
@@ -65,7 +65,7 @@ simone  = User.create!(
   address: "Saint germain des prés",
   ZIP_code: "75006",
   city: "Paris",
-  description:"Salut, c'est Simone. Moi, les machoman et compagnie, c'est non merci, ok? Je suis masseuse ok, mais le respect c'est de chaques côtés !",
+  description:"Salut, c'est Simone. Moi, les machomen et compagnie, c'est non merci. Ok? Je suis masseuse, mais le respect c'est de chaques côtés. Merci !",
   gender: "femme",
   mass_or_not: true,
 )
@@ -99,7 +99,7 @@ francoise  = User.create!(
   address: "5 avenuedu général de l'armée et de la guerre",
   ZIP_code: "14600",
   city: "Honfleur",
-  description:"Salut mes ptites beautés, vous me reconnaissez, c'est moi Françoise Sagan. Vous avez sans doute entendu parler de moi car j'ai écrit 'bonjour tristesse' qui est au programme pour le BAC de Français. Bonjour la décoince mdr. Bref, choose me and you won't regret it ! ;) Bisous <3",
+  description:"Salut mes ptites beautés, vous me reconnaissez? C'est moi Françoise Sagan. Vous avez sans doute entendu parler de moi car j'ai écrit 'bonjour tristesse' qui est au programme pour le BAC de Français. Bonjour la décoince mdr. Bref, choose me and you won't regret it ! ;) Bisous <3",
   gender: "femme",
   mass_or_not: true,
 )
@@ -116,7 +116,7 @@ zelda  = User.create!(
   address: "33, mai road",
   ZIP_code: "78350",
   city: "Montgomery",
-  description:"Salut les aminches, c'est Zelda Fitzgerald. Je suis la femme ET muse de mon Francis Scott de mari. Trop bien ? Mais je suis aussi une grand écrivain, ne soyez pas réducteur ! Et le jeu vidéo, ça vient aussi de moi ;) Choisissez moi pour un massage. On ne s'ennuiera pas !",
+  description:"Salut les aminches, c'est Zelda Fitzgerald. Je suis la femme ET la muse de mon Francis Scott de mari. Trop bien ? Mais je suis aussi une grand écrivain, ne soyez pas réducteur ! Et le jeu vidéo, ça vient aussi de moi ;) Choisissez moi pour un massage. On ne s'ennuiera pas !",
   gender: "femme",
   mass_or_not: true,
 )
@@ -133,7 +133,7 @@ comtesse  = User.create!(
   address: "543, rue Bolchaïa Morskaïa ",
   ZIP_code: "94410",
   city: "Saint Pétersbourg",
-  description:"Bonjour à tous, c'est moi Sophie Rostopchine1, mais on me connait mieux sous le nom de la comtesse de Ségur ! J'ai écris plein de livres pour les petits enfants et ai découvert le massage il y a quelques années avec mon mari. Après une reconversion j'exerce  aujourd'hui ce métier passion et serait heureuse de vous rencontrer pour une séance.",
+  description:"Bonjour à tous, c'est moi Sophie Rostopchine1, mais on me connait mieux sous le nom de la comtesse de Ségur ! J'ai écrit plein de livres pour les petits enfants et ai découvert le massage il y a quelques années avec mon mari. Après une reconversion j'exerce  aujourd'hui ce métier passion et serait heureuse de vous rencontrer pour une séance.",
   gender: "femme",
   mass_or_not: true,
 )
@@ -150,7 +150,7 @@ andre  = User.create!(
   address: "1 bis rue Vaneau",
   ZIP_code: "75007",
   city: "Paris",
-  description:"Salut les potaux, moi c'est André Gide ou dédé comme vous voulez ;). J'ai eu le prix nobel, cool non ? Bref maintenant pour moi c'est massage, massage, massage. Je vis massage, je bois massage, je mange massage et je dors massage (quand je dors). Au plaisir de vous rencontrer",
+  description:"Salut les potaux, moi c'est André Gide ou dédé comme vous voulez ;) J'ai eu le prix nobel, la classe, non ? Bref maintenant pour moi c'est massage, massage, massage. Je vis massage, je bois massage, je mange massage et je dors massage (quand je dors). Au plaisir de vous rencontrer",
   gender: "homme",
   mass_or_not: true,
 )
@@ -184,7 +184,7 @@ michel  = User.create!(
   address: "58 rue du général De Gaulles",
   ZIP_code: "92200",
   city: "Neuilly sur Seine",
-  description:"Bonjours chers amis. C'est Michel Houellebecq. Je me suis mis récemment aux massages califoriens notamment et compte affiner ma technique grâce à RelaxMass'. Sinon j'aime bien boire du pinard et fumer des clopes. A très vite ! :)",
+  description:"Bonjour chers amis. C'est Michel Houellebecq. Je me suis mis récemment aux massages califoriens notamment et compte affiner ma technique grâce à RelaxMass'. Sinon j'aime bien boire du pinard et fumer des clopes. A très vite ! :)",
   gender: "homme",
   mass_or_not: true,
 )
@@ -218,7 +218,7 @@ bret  = User.create!(
   address: "1024 Abbey Road",
   ZIP_code: "62170",
   city: "Los Angeles",
-  description:"Ola Amigas. C'est Bret Easton! Tonnerre de Bret ! ;) lol Pour moi, le roman, c'est fini, je ne crois pas que j'y retournerais un jour ! Par contre, je masse super bien, alors laissé vous tenter !",
+  description:"Ola Amigos. C'est Bret Easton! Tonnerre de Bret ! ;) lol Pour moi, le roman, c'est fini, je ne crois pas que j'y retournerai un jour ! Par contre, je masse super bien, alors laissez vous tenter !",
   gender: "homme",
   mass_or_not: true,
 )
@@ -383,6 +383,8 @@ massages31 = Massage.create!(
   massage_type: "Réflexologie",
   user: bret
 )
+
+puts "create bookings"
 
 booking1 = Booking.create!(
   user: nicolas,
@@ -640,6 +642,8 @@ booking43 = Booking.create!(
   start_date: "2019-10-19 14:00:00"
 )
 
+puts "create reviews"
+
 review1 = Review.create!(
   user: booking1.user,
   booking: booking1,
@@ -651,7 +655,7 @@ review2 = Review.create!(
   user: booking2.user,
   booking: booking2,
   rating: 4,
-  content: "Le massage était super, mais les pierres étaient un peu chaudes"
+  content: "Le massage était super, mais les pierres étaient un peu trop chaudes"
 )
 review3 = Review.create!(
   user: booking3.user,
@@ -684,7 +688,7 @@ review7 = Review.create!(
   user: booking7.user,
   booking: booking7,
   rating: 4,
-  content: "Massage super, Georges qui est une femme a été très douce."
+  content: "Massage super. Georges, qui est une femme, a été très douce."
 )
 
 review8 = Review.create!(
@@ -705,13 +709,13 @@ review10 = Review.create!(
   user: booking10.user,
   booking: booking10,
   rating: 3,
-  content: "C'était cool, mais francoise masse vraiment très fort. Enfin je recommande quand même, ça fait du bien (surtout quand ça s'arrete lol)"
+  content: "C'était cool, mais Francoise masse vraiment très fort. Enfin je recommande quand même, ça fait du bien (surtout quand ça s'arrete lol)"
 )
 review11 = Review.create!(
   user: booking11.user,
   booking: booking11,
   rating: 4,
-  content: "Trop bien, les pierres étaient piles à la bonne température. Simplement Zelda ne parle pas français. C'étaait dur de communiquer"
+  content: "Trop bien, les pierres étaient pile à la bonne température. Simplement Zelda ne parle pas français. C'étaait dur de communiquer"
 )
 
 review12 = Review.create!(
@@ -725,7 +729,7 @@ review13 = Review.create!(
   user: booking13.user,
   booking: booking13,
   rating: 2,
-  content: "Zela m'a dit que je sentais mauvais des pieds et m'a obligé à aller les laver :("
+  content: "Zelda m'a dit que je sentais mauvais des pieds et m'a obligé à aller les laver :("
 )
 
 review14 = Review.create!(
@@ -752,7 +756,7 @@ review17 = Review.create!(
   user: booking17.user,
   booking: booking17,
   rating: 5,
-  content: "André est divin ses massages sont des oeuvres d'arts"
+  content: "André est divin. Ses massages sont des oeuvres d'arts"
 )
 
 review18 = Review.create!(
@@ -766,7 +770,7 @@ review19 = Review.create!(
   user: booking19.user,
   booking: booking19,
   rating: 3,
-  content: "Charles est bien venu à l'air convenue mais il sentait le bourbon... RAS quant au massage."
+  content: "Charles est bien venu à l'heure convenue mais il sentait le bourbon... RAS quant au massage."
 )
 
 review20 = Review.create!(
@@ -820,7 +824,7 @@ review27 = Review.create!(
   user: booking27.user,
   booking: booking27,
   rating: 5,
-  content: "C'était juste 'Wahhh' !"
+  content: "C'était juste 'WAH' !"
 )
 
 review28 = Review.create!(
