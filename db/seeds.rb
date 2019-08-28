@@ -10,7 +10,7 @@ puts "create 2 users"
 nicolas = User.create!(
   email: "nicolas@gmail.com",
   password: "nounours",
-  first_name: "Nikola",
+  first_name: "Nicolas",
   last_name: "Smith",
   address: "24 rue du Coteau",
   ZIP_code: "92370",
@@ -252,4 +252,607 @@ massages4 = Massage.create!(
 massages5 = Massage.create!(
   massage_type: "Réflexologie",
   user: marguerite
+)
+
+massages6 = Massage.create!(
+  massage_type: "Massage Suedois",
+  user: simone
+)
+
+massages7 = Massage.create!(
+  massage_type: "Massage Californien",
+  user: simone
+)
+
+massages8 = Massage.create!(
+  massage_type: "Pierres chaudes",
+  user: simone
+)
+
+massages9 = Massage.create!(
+  massage_type: "Shiatsu",
+  user: george
+)
+
+massages10 = Massage.create!(
+  massage_type: "Réflexologie",
+  user: george
+)
+
+massages11 = Massage.create!(
+  massage_type: "Massage Suedois",
+  user: francoise
+)
+
+massages12 = Massage.create!(
+  massage_type: "Massage Californien",
+  user: francoise
+)
+
+massages13 = Massage.create!(
+  massage_type: "Pierres chaudes",
+  user: zelda
+)
+
+massages14 = Massage.create!(
+  massage_type: "Shiatsu",
+  user: zelda
+)
+
+massages15 = Massage.create!(
+  massage_type: "Réflexologie",
+  user: zelda
+)
+
+massages16 = Massage.create!(
+  massage_type: "Massage Suedois",
+  user: comtesse
+)
+
+massages17 = Massage.create!(
+  massage_type: "Massage Californien",
+  user: comtesse
+)
+
+massages18 = Massage.create!(
+  massage_type: "Pierres chaudes",
+  user: comtesse
+)
+
+massages19 = Massage.create!(
+  massage_type: "Shiatsu",
+  user: comtesse
+)
+
+massages20 = Massage.create!(
+  massage_type: "Réflexologie",
+  user: comtesse
+)
+
+massages21 = Massage.create!(
+  massage_type: "Réflexologie",
+  user: andre
+)
+
+massages22 = Massage.create!(
+  massage_type: "Massage Suedois",
+  user: andre
+)
+
+massages23 = Massage.create!(
+  massage_type: "Massage Californien",
+  user: andre
+)
+
+massages24 = Massage.create!(
+  massage_type: "Pierres chaudes",
+  user: charles
+)
+
+massages25 = Massage.create!(
+  massage_type: "Shiatsu",
+  user: charles
+)
+
+massages26 = Massage.create!(
+  massage_type: "Réflexologie",
+  user: charles
+)
+
+massages27 = Massage.create!(
+  massage_type: "Massage Suedois",
+  user: michel
+)
+
+massages28 = Massage.create!(
+  massage_type: "Massage Californien",
+  user: michel
+)
+
+massages29 = Massage.create!(
+  massage_type: "Pierres chaudes",
+  user: albert
+)
+
+massages30 = Massage.create!(
+  massage_type: "Shiatsu",
+  user: albert
+)
+
+massages31 = Massage.create!(
+  massage_type: "Réflexologie",
+  user: bret
+)
+
+booking1 = Booking.create!(
+  user: nicolas,
+  massage: massages1,
+  start_date: "2019-06-10 16:00:00"
+)
+
+booking2 = Booking.create!(
+  user: nicolas,
+  massage: massages3,
+  start_date: "2019-06-08 18:00:00"
+)
+booking3 = Booking.create!(
+  user: marie,
+  massage: massages4,
+  start_date: "2019-06-08 16:00:00"
+)
+
+booking4 = Booking.create!(
+  user: nicolas,
+  massage: massages7,
+  start_date: "2019-06-13 16:00:00"
+)
+
+booking5 = Booking.create!(
+  user: marie,
+  massage: massages7,
+  start_date: "2019-06-11 09:00:00"
+)
+
+booking6 = Booking.create!(
+  user: marie,
+  massage: massages7,
+  start_date: "2019-06-11 11:00:00"
+)
+booking7 = Booking.create!(
+  user: marie,
+  massage: massages9,
+  start_date: "2019-06-14 16:00:00"
+)
+
+booking8 = Booking.create!(
+  user: marie,
+  massage: massages10,
+  start_date: "2019-06-14 17:00:00"
+)
+
+booking9 = Booking.create!(
+  user: nicolas,
+  massage: massages11,
+  start_date: "2019-06-10 16:00:00"
+)
+
+booking10 = Booking.create!(
+  user: marie,
+  massage: massages12,
+  start_date: "2019-06-15 18:00:00"
+)
+
+booking11 = Booking.create!(
+  user: nicolas,
+  massage: massages13,
+  start_date: "2019-06-15 15:00:00"
+)
+
+booking12 = Booking.create!(
+  user: marie,
+  massage: massages14,
+  start_date: "2019-06-17 20:00:00"
+)
+
+booking13 = Booking.create!(
+  user: nicolas,
+  massage: massages15,
+  start_date: "2019-06-18 11:00:00"
+)
+
+booking14 = Booking.create!(
+  user: nicolas,
+  massage: massages16,
+  start_date: "2019-06-18 19:00:00"
+)
+
+booking15 = Booking.create!(
+  user: marie,
+  massage: massages18,
+  start_date: "2019-06-20 09:00:00"
+)
+
+booking16 = Booking.create!(
+  user: nicolas,
+  massage: massages20,
+  start_date: "2019-06-22 14:00:00"
+)
+
+booking17 = Booking.create!(
+  user: marie,
+  massage: massages21,
+  start_date: "2019-06-25 16:00:00"
+)
+
+booking18 = Booking.create!(
+  user: nicolas,
+  massage: massages21,
+  start_date: "2019-06-25 17:00:00"
+)
+
+booking19 = Booking.create!(
+  user: nicolas,
+  massage: massages25,
+  start_date: "2019-07-01 18:00:00"
+)
+
+booking20 = Booking.create!(
+  user: marie,
+  massage: massages26,
+  start_date: "2019-07-02 19:00:00"
+)
+
+booking21 = Booking.create!(
+  user: marie,
+  massage: massages26,
+  start_date: "2019-07-10 20:00:00"
+)
+
+booking22 = Booking.create!(
+  user: marie,
+  massage: massages27,
+  start_date: "2019-07-10 11:00:00"
+)
+
+booking23 = Booking.create!(
+  user: nicolas,
+  massage: massages27,
+  start_date: "2019-07-16 12:00:00"
+)
+
+booking24 = Booking.create!(
+  user: nicolas,
+  massage: massages28,
+  start_date: "2019-08-05 16:00:00"
+)
+
+booking25 = Booking.create!(
+  user: nicolas,
+  massage: massages28,
+  start_date: "2019-08-13 14:00:00"
+)
+
+booking26 = Booking.create!(
+  user: marie,
+  massage: massages29,
+  start_date: "2019-08-14 18:00:00"
+)
+
+booking27 = Booking.create!(
+  user: nicolas,
+  massage: massages29,
+  start_date: "2019-08-15 17:00:00"
+)
+
+booking28 = Booking.create!(
+  user: marie,
+  massage: massages30,
+  start_date: "2019-08-16 16:00:00"
+)
+
+booking29 = Booking.create!(
+  user: marie,
+  massage: massages30,
+  start_date: "2019-08-17 10:00:00"
+)
+
+booking30 = Booking.create!(
+  user: nicolas,
+  massage: massages30,
+  start_date: "2019-08-27 09:00:00"
+)
+
+booking31 = Booking.create!(
+  user: marie,
+  massage: massages31,
+  start_date: "2019-08-28 14:00:00"
+)
+
+booking32 = Booking.create!(
+  user: nicolas,
+  massage: massages31,
+  start_date: "2019-08-26 15:00:00"
+)
+
+booking33 = Booking.create!(
+  user: nicolas,
+  massage: massages1,
+  start_date: "2019-09-10 16:00:00"
+)
+
+booking34 = Booking.create!(
+  user: marie,
+  massage: massages7,
+  start_date: "2019-09-11 11:00:00"
+)
+
+booking35 = Booking.create!(
+  user: nicolas,
+  massage: massages11,
+  start_date: "2019-09-10 16:00:00"
+)
+
+booking36 = Booking.create!(
+  user: marie,
+  massage: massages12,
+  start_date: "2019-09-16 18:00:00"
+)
+
+booking37 = Booking.create!(
+  user: marie,
+  massage: massages14,
+  start_date: "2019-09-17 20:00:00"
+)
+
+booking38 = Booking.create!(
+  user: marie,
+  massage: massages18,
+  start_date: "2019-09-20 09:00:00"
+)
+
+booking39 = Booking.create!(
+  user: marie,
+  massage: massages21,
+  start_date: "2019-09-25 16:00:00"
+)
+
+booking40 = Booking.create!(
+  user: nicolas,
+  massage: massages25,
+  start_date: "2019-12-24 18:00:00"
+)
+
+booking41 = Booking.create!(
+  user: marie,
+  massage: massages27,
+  start_date: "2019-09-10 11:00:00"
+)
+
+booking42 = Booking.create!(
+  user: nicolas,
+  massage: massages29,
+  start_date: "2019-10-15 17:00:00"
+)
+
+booking43 = Booking.create!(
+  user: marie,
+  massage: massages31,
+  start_date: "2019-10-19 14:00:00"
+)
+
+review1 = Review.create!(
+  user: booking1.user,
+  booking: booking1,
+  rating: 3,
+  content: "Le massage a bien été effectué, cependant Marguerite semblait un peu ailleurs..."
+)
+
+review2 = Review.create!(
+  user: booking2.user,
+  booking: booking2,
+  rating: 4,
+  content: "Le massage était super, mais les pierres étaient un peu chaudes"
+)
+review3 = Review.create!(
+  user: booking3.user,
+  booking: booking3,
+  rating: 5,
+  content: "Massage extra, rien à dire. Vous pouvez y aller les yeux fermés !"
+)
+
+review4 = Review.create!(
+  user: booking4.user,
+  booking: booking4,
+  rating: 1,
+  content: "Simone a dit que j'étais un phallocrate et elle m'a pincé pendant le massage ;("
+)
+
+review5 = Review.create!(
+  user: booking5.user,
+  booking: booking5,
+  rating: 3,
+  content: "Le massage était super, mais Simone est arrivée en retard..."
+)
+
+review6 = Review.create!(
+  user: booking6.user,
+  booking: booking6,
+  rating: 2,
+  content: "Simone est arrivée en retard et a essayé de me mordre :("
+)
+review7 = Review.create!(
+  user: booking7.user,
+  booking: booking7,
+  rating: 4,
+  content: "Massage super, Georges qui est une femme a été très douce."
+)
+
+review8 = Review.create!(
+  user: booking8.user,
+  booking: booking8,
+  rating: 3,
+  content: "Georges est très douce comme à son habitude, mais elle avait oublié son matériel. J'ai du me mettre sur la table de la cuisine pour le massage."
+)
+
+review9 = Review.create!(
+  user: booking9.user,
+  booking: booking9,
+  rating: 5,
+  content: "C'était vraiment super... J'en suis encore tout remué"
+)
+
+review10 = Review.create!(
+  user: booking10.user,
+  booking: booking10,
+  rating: 3,
+  content: "C'était cool, mais francoise masse vraiment très fort. Enfin je recommande quand même, ça fait du bien (surtout quand ça s'arrete lol)"
+)
+review11 = Review.create!(
+  user: booking11.user,
+  booking: booking11,
+  rating: 4,
+  content: "Trop bien, les pierres étaient piles à la bonne température. Simplement Zelda ne parle pas français. C'étaait dur de communiquer"
+)
+
+review12 = Review.create!(
+  user: booking12.user,
+  booking: booking12,
+  rating: 5,
+  content: "Incroyable, Zelda est une vraie magicienne ! J'en suis toute revigorée"
+)
+
+review13 = Review.create!(
+  user: booking13.user,
+  booking: booking13,
+  rating: 2,
+  content: "Zela m'a dit que je sentais mauvais des pieds et m'a obligé à aller les laver :("
+)
+
+review14 = Review.create!(
+  user: booking14.user,
+  booking: booking14,
+  rating: 5,
+  content: "C'était extraordinaire. Cette comtesse est divine !"
+)
+review15 = Review.create!(
+  user: booking15.user,
+  booking: booking15,
+  rating: 4,
+  content: "Les pierres de la comtesse était bien chaudes. J'étais ravie !"
+)
+
+review16 = Review.create!(
+  user: booking16.user,
+  booking: booking16,
+  rating: 3,
+  content: "La comtesse m'a bien massé, mais elle m'a rouspété dessus car mes chaussettes étaient dépareillées"
+)
+
+review17 = Review.create!(
+  user: booking17.user,
+  booking: booking17,
+  rating: 5,
+  content: "André est divin ses massages sont des oeuvres d'arts"
+)
+
+review18 = Review.create!(
+  user: booking18.user,
+  booking: booking18,
+  rating: 5,
+  content: "Dédé m'a massé bien fort et c'était bon"
+)
+
+review19 = Review.create!(
+  user: booking19.user,
+  booking: booking19,
+  rating: 3,
+  content: "Charles est bien venu à l'air convenue mais il sentait le bourbon... RAS quant au massage."
+)
+
+review20 = Review.create!(
+  user: booking20.user,
+  booking: booking20,
+  rating: 4,
+  content: "Charles m'a massé comme jamais ! Je recommande !"
+)
+
+review21 = Review.create!(
+  user: booking21.user,
+  booking: booking21,
+  rating: 2,
+  content: "Charles s'est endormi pendant le massage. Quelle déception..."
+)
+
+review22 = Review.create!(
+  user: booking22.user,
+  booking: booking22,
+  rating: 5,
+  content: "Extraordinaire ! Michel est un vrai expert !"
+)
+review23 = Review.create!(
+  user: booking23.user,
+  booking: booking23,
+  rating: 4,
+  content: "Très satisfait. Michel est un vrai professionnel ! Je recommande :)"
+)
+
+review24 = Review.create!(
+  user: booking24.user,
+  booking: booking24,
+  rating: 5,
+  content: "OMG !!! That was amazing !"
+)
+
+review25 = Review.create!(
+  user: booking25.user,
+  booking: booking25,
+  rating: 3,
+  content: "Un peu moins bien la dernière fois. Michel a allumé un clop pendant le massage. Sinon, que du bonheur..."
+)
+
+review26 = Review.create!(
+  user: booking26.user,
+  booking: booking26,
+  rating: 5,
+  content: "Super cool, je recommande. Rien à dire, juste extra !"
+)
+review27 = Review.create!(
+  user: booking27.user,
+  booking: booking27,
+  rating: 5,
+  content: "C'était juste 'Wahhh' !"
+)
+
+review28 = Review.create!(
+  user: booking28.user,
+  booking: booking28,
+  rating: 3,
+  content: "Massothérapeuthe très pro, mais massage trop court"
+)
+
+review29 = Review.create!(
+  user: booking29.user,
+  booking: booking29,
+  rating: 4,
+  content: "Super, malgré quelques petits problèmes de ponctualité"
+)
+
+review30 = Review.create!(
+  user: booking30.user,
+  booking: booking30,
+  rating: 4,
+  content: "Super massage. Vous pouvez y aller les yeux fermés !"
+)
+review31 = Review.create!(
+  user: booking31.user,
+  booking: booking31,
+  rating: 5,
+  content: "Incroyable, Bret a fait des miracles"
+)
+
+review32 = Review.create!(
+  user: booking32.user,
+  booking: booking32,
+  rating: 1,
+  content: "Je ne recommande pas du tout ce monsieur. Il a été très grossier et s'est comporté comme un vrai voyou."
 )
