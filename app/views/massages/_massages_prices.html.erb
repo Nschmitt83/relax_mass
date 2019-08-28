@@ -1,1 +1,13 @@
-<h1>TEMPLATES CARTES PRIX</h1>
+<div class="card" style="max-width: 500px">
+    <h2><strong>Prestations proposées</strong></h2>
+  <% MASSAGE_PRICE_AND_TYPE.each do |massage, v| %>
+    <div class="card-body cont_price" style="max-height: 2px">
+      <blockquote class="blockquote mb-0">
+        <p style="padding-left: 60px"><%= massage %> :</p>
+      </blockquote>
+      <blockquote class="blockquote mb-0">
+        <p style="padding-right: 60px"><strong><%= v[:price] %> €</strong></p>
+      </blockquote>
+    </div>
+  <% end %>
+</div>
