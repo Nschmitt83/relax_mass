@@ -227,3 +227,29 @@ url12 = "https://i2.wp.com/diacritik.com/wp-content/uploads/2015/12/543fdee65214
 bret.remote_avatar_url = url12
 bret.save!
 
+puts "create massages for masseurs"
+
+massages1 = Massage.create!(
+  massage_type: "Massage Suedois",
+  user: marguerite
+)
+
+massages2 = Massage.create!(
+  massage_type: "Massage californien",
+  user: marguerite
+)
+
+massages3 = Massage.create!(
+  massage_type: "Pierres chaudes",
+  user: marguerite
+)
+
+massages4 = Massage.create!(
+  massage_type: "Shiatsu",
+  user: marguerite
+)
+
+massages5 = Massage.create!(
+  massage_type: "Réflexologie",
+  user: marguerite
+)

@@ -1,0 +1,24 @@
+<div class="card" >
+  <div class="card-body">
+    <div class="d-flex align-items-center">
+      <%#= link_to (masseur_path(masseur.id)), class: "text-dark"do %>
+        <%= cl_image_tag "#{masseur.avatar}",crop: :fill, height: 100, width: 100, class: "avatar-large" %>
+      <%#=end %>
+      <div>
+        <h5 class="card-title"><%= masseur.first_name %> <%= masseur.last_name %></h5>
+        <% unless masseur.massages.empty? %>
+          <ul class="massage_list">
+          <% masseur.massages.each do |massage| %>
+            <li><%= massage.massage_type %></li>
+          <% end %>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+    <p class="card-text"><%= masseur.description %></p>
+    <div class="d-flex justify-content-between">
+      <p>Ville: <%= masseur.city %></p>
+      <p>Rating : <% 5.times do %> <i class="fa fa-star gold text-success"></i><% end %></p>
+    </div>
+  </div>
+</div>
