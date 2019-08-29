@@ -1,13 +1,17 @@
 <div class="card price">
     <h2>Prestations proposées</h2>
+<% massages_of_masseur = masseur.massages.map { |m| m.massage_type } %>
+
   <% MASSAGE_PRICE_AND_TYPE.each do |massage, v| %>
-    <div class="card-body cont_price" style="max-height: 2px">
-      <blockquote class="blockquote mb-0">
-        <p style="padding-left: 60px"><%= massage %> :</p>
-      </blockquote>
-      <blockquote class="blockquote mb-0">
-        <p style="padding-right: 60px"><strong><%= v[:price] %> €</strong></p>
-      </blockquote>
-    </div>
+    <% if massages_of_masseur.include?(massage) %>
+      <div class="card-body cont_price" style="max-height: 2px">
+        <blockquote class="blockquote mb-0">
+          <p style="padding-left: 60px"><%= massage %> :</p>
+        </blockquote>
+        <blockquote class="blockquote mb-0">
+          <p style="padding-right: 60px"><strong><%= v[:price] %> €</strong></p>
+        </blockquote>
+      </div>
+    <% end %>
   <% end %>
 </div>
