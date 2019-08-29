@@ -20,11 +20,7 @@
       <p>Ville: <%= masseur.city %></p>
       <% average = masseur.reviews.sum(&:rating) / masseur.reviews.size.to_f %>
       <p>
-         Note :
-        <% average.round.times do %> <i class="fa fa-star gold text-primary"></i>
-        <% end %>
-        <% (5 - average).round(half: :down).times do %> <i class="far fa-star gold text-primary"></i>
-        <% end %>
+         Note : <%= masseur.rating %>/5
       </p>
     </div>
   </div>
