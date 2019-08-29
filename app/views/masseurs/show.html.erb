@@ -1,9 +1,9 @@
 <div class="container-massage">
-  <%= render 'masseur_card_large', user: @masseur%>
+  <%= render 'masseurs/masseur_card_large', user: @masseur, average: @average%>
   <div class="row">
     <div class="col-6 d-flex flex-column justify-content-between">
         <%= render 'massages/massages_prices'%>
-        <%= render 'description_masseur_card', user: @masseur %>
+        <%= render 'masseurs/description_masseur_card', user: @masseur %>
         <%= render 'reviews/reviews_card', reviews: @reviews %>
     </div>
     <div class="col-6">

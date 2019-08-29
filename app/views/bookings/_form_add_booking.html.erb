@@ -1,6 +1,6 @@
 <div class="form-wrapper" >
   <div class="card-body justify-content-center">
-    <%= simple_form_for [@masseur, @booking] , url: masseur_bookings_path(params[:id]) do |f| %>
+    <%= simple_form_for [@masseur, @booking] , url: masseur_bookings_path(@masseur.id) do |f| %>
       <%= f.input :massage, label: false, prompt: "Choisissez votre massage", collection: @masseur.massages.map(&:massage_type)  %>
       <%= f.input :start_date, label: false,  as: :string, required: false, input_html: {id: "datepicker",class: "d-none"} %>
       <div class="w-100 d-flex justify-content-center">

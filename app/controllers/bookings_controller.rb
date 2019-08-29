@@ -8,7 +8,9 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to masseur_path(@masseur)
     else
-      render masseur_path(@masseur)
+      @reviews = @masseur.reviews
+      @average = @reviews.sum(&:rating) / @reviews.size.to_f
+      render 'masseurs/show'
     end
   end
 
@@ -17,4 +19,6 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:start_date)
   end
+
+
 end
