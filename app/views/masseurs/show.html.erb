@@ -7,14 +7,14 @@
         <%= render 'reviews/reviews_card', reviews: @reviews %>
     </div>
     <div class="col-6">
-      <div class="card">
-        <h2 class="text-center">Réservez votre massage</h2>
-        <p class="text-center" >Choisissez la date et l'heure:</p>
+      <div class="card p-2 h-100 d-flex justify-content-between">
+        <h2 class="text-center my-5">Réservez votre massage</h2>
         <%= render 'bookings/form_add_booking' %>
+        <div class=" w-100 d-flex justify-content-end mt-5">
+          <%= link_to "Retour à la liste", masseurs_path, class: "btn btn-outline-success m-3"  %>
+        </div>
       </div>
     </div>
-    <div class=" w-100 d-flex justify-content-end">
-      <%= link_to "Retour à la liste", masseurs_path, class: "btn btn-outline-success m-3"  %>
-    </div>
+
   </div>
 </div>
