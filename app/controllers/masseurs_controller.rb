@@ -18,6 +18,18 @@ class MasseursController < ApplicationController
     @reviews = @masseurs.map(&:reviews)
     @massage = Massage.new
     @user    = User.new
+
+    if params["search"].present?
+      sql_query = " \
+      massage_type ILIKE :type \
+      AND city ILIKE :city \
+      "
+      @masseurs = User.joins(:massages).where(sql_query,
+                                              type: "%#{params["search"][:massage_type]}%",
+                                              city: "%#{params["search"][:city]}%").uniq
+    else
+      @masseurs = User.where(mass_or_not: true)
+    end
   end
 
   def show

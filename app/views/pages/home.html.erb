@@ -5,9 +5,9 @@
       <div class="card d-flex justify-content-around pt-4 px-3" id="finder_card" style="width: 400px; height: 400px;">
         <h3>J’ai pas envie de me déplacer... <strong>Relax Mass'</strong> me trouve un massothérapeute à domicile :</h3>
 
-          <%= simple_form_for :masseur, method: "get" do |f| %>
+          <%= simple_form_for :search, url: masseurs_path, method: "get" do |f| %>
             <%= f.input :massage_type, prompt: "Type de massage", label:false , collection: MASSAGE_PRICE_AND_TYPE.keys%>
-             <%= f.input :city, placeholder: 'Ma ville', label:false %>
+             <%= f.input :city, input_html: {value: ""}, placeholder: 'Ma ville', label:false %>
             <%= f.submit "Rechercher", class: "btn btn-info my-3" %>
           <% end %>
 
@@ -36,6 +36,7 @@
             <%= cl_image_tag("013-massage_rjd6wc", width: 100, crop: :fill, class:"picto-home", color:"#ffffff", effect:"grayscale") %>
             <p><strong>Des professionnels de confiance</strong></p>
             <p>Tous nos massothérapeuthes sont certifiés et leur profil a été vérifié par notre plate-forme.</p>
+             <%= link_to "Voir tous les massothérapeuthes", masseurs_path, class: "btn btn-outline-success m-3"  %>
           </div>
           <div class="text-center pl-4">
         <!--     <h3>3</h3> -->
