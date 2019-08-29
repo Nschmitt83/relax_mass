@@ -3,7 +3,7 @@
   <div class="d-flex justify-content-center">
     <div class="card justify-content-center align-items-end" id="white_card" style="width: 450px">
       <div class="card d-flex justify-content-around pt-4 px-3" id="finder_card" style="width: 400px; height: 400px;">
-        <h2>J’ai pas envie de me déplacer... <strong>Relax Mass'</strong> me trouve un massothérapeute à domicile :</h2>
+        <h3>J’ai pas envie de me déplacer... <strong>Relax Mass'</strong> me trouve un massothérapeute à domicile :</h3>
 
           <%= simple_form_for :masseur, method: "get" do |f| %>
             <%= f.input :massage_type, prompt: "Type de massage", label:false , collection: MASSAGE_PRICE_AND_TYPE.keys%>
@@ -26,19 +26,19 @@
         <h2>Comment ça marche ?</h2>
         <div class="three-steps d-flex justify-content-between">
           <div class="text-center pr-4">
-            <h3>1</h3>
+           <!--  <h3>1</h3> -->
             <%= cl_image_tag("004-smartphone_nttmt2", width: 100, crop: :fill, class:"picto-home", color:"#ffffff", effect:"grayscale") %>
             <p><strong>Réservez un massage à domicile</strong></p>
             <p>Vous avez peu de temps devant vous ? Nous proposons des massages à domicile ou sur votre lieu de travail.</p>
           </div>
           <div class="text-center">
-            <h3>2</h3>
+          <!--   <h3>2</h3> -->
             <%= cl_image_tag("013-massage_rjd6wc", width: 100, crop: :fill, class:"picto-home", color:"#ffffff", effect:"grayscale") %>
             <p><strong>Des professionnels de confiance</strong></p>
             <p>Tous nos massothérapeuthes sont certifiés et leur profil a été vérifié par notre plate-forme.</p>
           </div>
           <div class="text-center pl-4">
-            <h3>3</h3>
+        <!--     <h3>3</h3> -->
             <%= cl_image_tag("008-customer_btmlyg", width: 100, crop: :fill, class:"picto-home", color:"#ffffff", effect:"grayscale") %>
             <p><strong>Des prestations évaluées</strong></p>
             <p>Consultez les avis laissés sur les masseurs et laissez des commentaires après la séance de massage.</p>
