@@ -1,11 +1,9 @@
 .massage_list {
   list-style: none;
-}
-.card-text.massage_list {
-  padding-inline-start:0;
+  padding-inline-start: 0;
   text-align: justify;
 }
-.card #masseur_card {
-  width: 30rem;
-  height: 22rem;
+
+.card-title a:hover {
+    text-decoration: none;
 }

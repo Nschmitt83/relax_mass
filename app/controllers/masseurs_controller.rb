@@ -16,7 +16,6 @@ class MasseursController < ApplicationController
     @masseur = User.find(params[:id])
     @reviews = @masseur.reviews
     @booking = Booking.new
-    @average = @reviews.sum(&:rating) / @reviews.size.to_f
   end
 
   private
