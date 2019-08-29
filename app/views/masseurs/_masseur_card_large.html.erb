@@ -1,4 +1,4 @@
-<div class="card large">
+<div class="card large my-3">
   <div class="card-body d-flex justify-content-between">
     <%= cl_image_tag "#{user.avatar}", crop: :fill, height: 100, width: 100, class: "avatar-large m-3" %>
     <div class="flex-grow-1">
@@ -16,6 +16,12 @@
         </ul>
       </div>
     </div>
-    <p>Rating : <% 5.times do %> <i class="fa fa-star gold text-primary"></i><% end %></p>
+    <p>
+      Note :
+      <% average.round.times do %> <i class="fa fa-star gold text-primary"></i>
+      <% end %>
+      <% (5 - average).round(half: :down).times do %> <i class="far fa-star gold text-primary"></i>
+      <% end %>
+    </p>
   </div>
 </div>

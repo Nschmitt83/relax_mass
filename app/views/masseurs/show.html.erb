@@ -1,10 +1,20 @@
-<h1>show masseur</h1>
-<%= render 'bookings/form_add_booking.html' %>
-
-<%= render 'masseur_card_large', user: @masseur %>
-<%= render 'description_masseur_card', user: @masseur %>
-<%= render 'bookings/rdv_card' %>
-<%= render 'reviews/reviews_card', reviews: @reviews %>
-<%= render 'massages/massages_prices'%>
-
-
+<div class="container-massage">
+  <%= render 'masseurs/masseur_card_large', user: @masseur, average: @average%>
+  <div class="row">
+    <div class="col-6 d-flex flex-column justify-content-between">
+        <%= render 'massages/massages_prices'%>
+        <%= render 'masseurs/description_masseur_card', user: @masseur %>
+        <%= render 'reviews/reviews_card', reviews: @reviews %>
+    </div>
+    <div class="col-6">
+      <div class="card">
+        <h2 class="text-center">Réservez votre massage</h2>
+        <p class="text-center" >Choisissez la date et l'heure:</p>
+        <%= render 'bookings/form_add_booking' %>
+      </div>
+    </div>
+    <div class=" w-100 d-flex justify-content-end">
+      <%= link_to "Retour à la liste", masseurs_path, class: "btn btn-outline-success m-3"  %>
+    </div>
+  </div>
+</div>
