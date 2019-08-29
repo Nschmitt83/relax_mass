@@ -7,10 +7,10 @@
   </button>
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <div class="navbar-nav align-items-md-center ">
-      <%= link_to "Qui sommes nous?", "#", class: "text-dark nav-item" %>
+      <%= link_to "Qui sommes nous?", "#", class: "text-info nav-item mr-5" %>
         <% if user_signed_in? %>
-          <p class="mb-0 font-weight-bold mr-2 text-dark nav-item">
-            Salut <%= link_to current_user.first_name.capitalize, profil_path(current_user), class: "text-dark" %> !
+          <p class="mb-0 font-weight-bold mr-3 text-danger nav-item">
+            Salut <%= link_to current_user.first_name.capitalize, profil_path(current_user), class: "text-danger" %> !
           </p>
           <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "btn btn-outline-success nav-item" %>
         <% else %>

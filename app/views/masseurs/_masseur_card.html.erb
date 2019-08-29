@@ -23,7 +23,7 @@
          Note :
         <% average.round.times do %> <i class="fa fa-star gold text-primary"></i>
         <% end %>
-        <% (5 - average).round.times do %> <i class="far fa-star gold text-primary"></i>
+        <% (5 - average).round(half: :down).times do %> <i class="far fa-star gold text-primary"></i>
         <% end %>
       </p>
     </div>
