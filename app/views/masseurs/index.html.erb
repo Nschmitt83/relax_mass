@@ -17,9 +17,9 @@
 
             <h3>Type de massage</h3>
             <%= simple_form_for @user, url: masseurs_path, method: :get do |f|%>
-            <%= f.input :first_name, label: false, collection: MASSAGE_PRICE_AND_TYPE.keys %>
+            <%= f.input :first_name, label: false, collection: MASSAGE_PRICE_AND_TYPE.keys, selected: @massage_type %>
             <h3>Ma ville</h3>
-            <%= f.input :city, label: false %>
+            <%= f.input :city, label: false, input_html: { value: @city } %>
             <h3>Genre</h3>
             <%= f.input :gender, label: "", as: :radio_buttons, collection: User::GENRE %>
 
@@ -27,7 +27,7 @@
               <%= f.input :last_name, as: :radio_buttons, label: "", collection: Review::RATING, wrapper: :vertical_collection_inline %>
 
 
-              <%= f.submit "GO !", class: "btn btn-info" %>
+              <%= f.submit "Filtrer", class: "btn btn-info" %>
             <% end %>
         </div>
         <div class="index_cards_masseurs">
