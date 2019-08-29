@@ -24,9 +24,28 @@
     <div class="row justify-content-center">
       <div class="col-12 col-lg-10 py-4">
         <h2>Comment ça marche ?</h2>
+        <div class="three-steps d-flex justify-content-between">
+          <div class="text-center pr-4">
+            <h3>1</h3>
+            <%= cl_image_tag("004-smartphone_nttmt2", width: 100, crop: :fill, class:"picto-home", color:"#ffffff", effect:"grayscale") %>
+            <p><strong>Réservez un massage à domicile</strong></p>
+            <p>Vous avez peu de temps devant vous ? Nous proposons des massages à domicile ou sur votre lieu de travail.</p>
+          </div>
+          <div class="text-center">
+            <h3>2</h3>
+            <%= cl_image_tag("013-massage_rjd6wc", width: 100, crop: :fill, class:"picto-home", color:"#ffffff", effect:"grayscale") %>
+            <p><strong>Des professionnels de confiance</strong></p>
+            <p>Tous nos massothérapeuthes sont certifiés et leur profil a été vérifié par notre plate-forme.</p>
+          </div>
+          <div class="text-center pl-4">
+            <h3>3</h3>
+            <%= cl_image_tag("008-customer_btmlyg", width: 100, crop: :fill, class:"picto-home", color:"#ffffff", effect:"grayscale") %>
+            <p><strong>Des prestations évaluées</strong></p>
+            <p>Consultez les avis laissés sur les masseurs et laissez des commentaires après la séance de massage.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 </div>
 
 <div class="massage-types">

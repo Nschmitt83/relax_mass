@@ -4,17 +4,32 @@
 }
 
 .project-intro {
-  color: $green;
   h2 {
-    padding-bottom: 1rem;
+    color: $green;
+    padding: 2rem 0;
+    text-align: center;
+  }
+}
+
+.three-steps {
+  h3 {
+  font-size: 2rem;
+  color: $skin;
+  }
+  .picto-home {
+    padding: 2rem 0;
+  }
+  p {
+    color: $gray;
   }
 }
 
 .massage-types {
   background-color: $green;
   h2 {
-    padding-bottom: 1rem;
+    padding: 2rem 0;
     color: white;
+    text-align: center;
   }
 }
 
@@ -27,3 +42,7 @@
   border-radius: 0px;
   border-style: none;
 }
+
+
+
+
