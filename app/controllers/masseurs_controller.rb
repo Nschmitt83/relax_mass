@@ -32,6 +32,7 @@ class MasseursController < ApplicationController
                                             gender: "%#{params[:user][:gender]}%").uniq
     @masseurs = @masseurs.select { |masseur| masseur.rating.to_i >= params[:user][:last_name].to_i } if params[:user][:last_name].present?
     @massage_type = params[:user][:first_name]
+    @city = params[:user][:city]
   end
 
   def home_search
@@ -43,5 +44,6 @@ class MasseursController < ApplicationController
                                             type: "%#{params[:search][:massage_type]}%",
                                             city: "%#{params[:search][:city]}%").uniq
     @massage_type = params[:search][:massage_type]
+    @city = params[:search][:city].capitalize
   end
 end
