@@ -1,36 +1,59 @@
 <div class="container">
   <div class="row justify-content-center">
-    <h1 style="margin: 30px">LES MASSO-THERAPEUTES A >VILLE<</h1>
+    <h1 style="margin: 30px">LES MASSO-THERAPEUTES <%= @title_inject %></h1>
       <div class="col-12 cd-lg-10 masseurs_container">
-          <div class="filtres">
-            <h2>Filtrez moi !</h2>
-            <div class="accordion" id="accordionExample">
-                <h3 id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fas fa-arrow-right"></i> Date
-                </h3>
-
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <%= simple_form_for :booking, method: "get" do |f| %>
-                    <%= f.input :start_date, label: false, as: :string, required: false, input_html: {id: "datepicker",class: "d-none"} %>
-                  <% end %>
-              </div>
-
+        <div class="filtres">
+          <h2>Filtrez moi !</h2>
+          <div class="accordion" id="accordionExample">
+            <h3 id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fas fa-arrow-right"></i> Date
+            </h3>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <%#= simple_form_for :booking, method: "get" do |f| %>
+              <%#= f.input :start_date, label: false, as: :string, required: false, input_html: {id: "datepicker",class: "d-none"} %>
             </div>
-            <h3><i class="fas fa-arrow-right"></i> Type de massage</h3>
-            <%#= simple_form_for [@massages] do |f| %>
-              <%#= f.input :description %>
-              <%#= f.association :massages %>
-              <%#= f.submit "add a dose", class: "btn btn-primary" %>
-            <%# end %>
 
-            <h3><i class="fas fa-arrow-right"></i> Mon domicile</h3>
-            <h3><i class="fas fa-arrow-right"></i> Genre</h3>
-            <h3><i class="fas fa-arrow-right"></i> Notes</h3>
-          </div>
-            <div class="index_cards_masseurs">
-            <% @masseurs.each do |masseur| %>
-                <%= render 'masseur_card', masseur: masseur %>
+            <h3 id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <i class="fas fa-arrow-right"></i> Type de massage
+            </h3>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <%= simple_form_for @user, url: masseurs_path, method: :get do |f|%>
+              <%= f.input :first_name, label: false, collection: MASSAGE_PRICE_AND_TYPE.keys %>
+            </div>
+
+
+
+
+
+            <h3 id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fas fa-arrow-right"></i> Mon domicile
+            </h3>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <%= f.input :city, label: false %>
+            </div>
+
+
+
+
+
+            <h3 id="headingFour" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><i class="fas fa-arrow-right"></i> Genre
+            </h3>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <%= f.input :gender, label: "", as: :radio_buttons, collection: User::GENRE %>
+            </div>
+
+          </div> <!-- FIN DIV ACCORDION -->
+
+              <h3><i class="fas fa-arrow-right"></i> Notes supérieures à</h3>
+              <%= f.input :last_name, label: false, collection: Review::RATING %>
+
+
+              <%= f.submit "GO !", class: "btn btn-primary" %>
             <% end %>
-            </div>
+        </div>
+        <div class="index_cards_masseurs">
+          <% @masseurs.each do |masseur| %>
+            <%= render 'masseur_card', masseur: masseur %>
+          <% end %>
+        </div>
       </div>
   </div>
 </div>
