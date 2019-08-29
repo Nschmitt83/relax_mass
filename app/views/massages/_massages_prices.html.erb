@@ -1,6 +1,6 @@
 <div class="card price p-3">
-    <h2>Prestations proposées</h2>
-<% massages_of_masseur = masseur.massages.map { |m| m.massage_type } %>
+  <h2>Prestations proposées</h2>
+  <% massages_of_masseur = masseur.massages.map { |m| m.massage_type } %>
 
   <% MASSAGE_PRICE_AND_TYPE.each do |massage, v| %>
     <% if massages_of_masseur.include?(massage) %>
