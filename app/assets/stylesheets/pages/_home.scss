@@ -1,1 +1,48 @@
 // Specific CSS for your home-page
+.banner {
+  background-color: white;
+}
+
+.project-intro {
+  h2 {
+    color: $green;
+    padding: 2rem 0;
+    text-align: center;
+  }
+}
+
+.three-steps {
+  h3 {
+  font-size: 2rem;
+  color: $skin;
+  }
+  .picto-home {
+    padding: 2rem 0;
+  }
+  p {
+    color: $gray;
+  }
+}
+
+.massage-types {
+  background-color: $green;
+  h2 {
+    padding: 2rem 0;
+    color: white;
+    text-align: center;
+  }
+}
+
+#finder_card {
+  background-color: $grey-green;
+  margin-right: -3rem;
+}
+
+#white_card {
+  border-radius: 0px;
+  border-style: none;
+}
+
+
+
+
