@@ -1,5 +1,5 @@
 
-<div class="card p-4 my-3" style="max-width: 35rem;">
+<div class="card p-4 mb-3">
   <h2>Mes informations</h2>
   <div class="card-body d-flex align-items-center">
     <%= image_tag "#{user.avatar}", crop: :fill, height: 100, width: 100, class: "avatar-large mr-5"%>
@@ -7,9 +7,9 @@
       <ul class="massage_list mx-2 mr-4">
         <li><strong>Nom: </strong> <%= user.last_name %></li>
         <li><strong>Prénom: </strong> <%= user.first_name %></li>
-        <li><strong>Adresse: </strong> <%= user.address %></li>
-        <li><strong>Code Postal: </strong> <%= user.ZIP_code%></li>
-        <li><strong>Ville: </strong> <%= user.city %></li>
+        <li><strong>Adresse: </strong>
+        </br><%= user.address %></li>
+        <li><%= user.ZIP_code%> <%= user.city %></li>
         <li><strong>Email: </strong> <%= user.email %></li>
       </ul>
     </div>
