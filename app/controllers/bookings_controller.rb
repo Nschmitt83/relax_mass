@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
     # @massage         = @masseur.massages.find_by(massage_type: params[:booking][:massage])
     @booking.massage = @massage.first
     if @booking.save
-      redirect_to masseur_path(@masseur)
+      redirect_to profil_path(current_user)
     else
       # On peut supprimer les 2 lignes dessous car le rating est dans le modèle User
       @reviews = @masseur.reviews

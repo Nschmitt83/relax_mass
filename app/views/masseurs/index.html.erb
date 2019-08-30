@@ -21,7 +21,7 @@
             <h3>Ma ville</h3>
             <%= f.input :city, label: false, input_html: { value: @city } %>
             <h3>Genre</h3>
-            <%= f.input :gender, label: "", as: :radio_buttons, collection: User::GENRE %>
+            <%= f.input :gender, label: "", as: :radio_buttons, collection: User::GENRE, wrapper: :vertical_collection_inline %>
 
               <h3>Notes supérieures à</h3>
               <%= f.input :last_name, as: :radio_buttons, label: "", collection: Review::RATING, wrapper: :vertical_collection_inline %>
