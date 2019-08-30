@@ -1,6 +1,13 @@
-<h1>Fiche profil</h1>
 <div class="container">
-<%= render 'bookings/rdv_card', booking: @last_booking, masseur: @masseur %>
-<%= render 'profils/card_presentation_user', user: @user %>
-
+  <h2 class="my-3">Mon compte</h2>
+  <div class="row">
+    <div class="col-6">
+      <%= render 'profils/card_presentation_user', user: @user %>
+      <%= render 'profils/to_become_massotheraps' %>
+    </div>
+    <div class="col-6">
+      <%= render 'bookings/rdv_card', booking: @last_booking, masseur: @masseur %>
+      <%= render 'bookings/last_bookings_card', user: @user %>
+    </div>
+  </div>
 </div>
