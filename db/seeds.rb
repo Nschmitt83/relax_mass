@@ -65,7 +65,7 @@ simone  = User.create!(
   address: "Saint germain des prés",
   ZIP_code: "75006",
   city: "Paris",
-  description:"Salut, c'est Simone. Moi, les machomen et compagnie, c'est non merci. Ok? Je suis masseuse, mais le respect c'est de chaques côtés. Merci !",
+  description:"Salut, c'est Simone. Moi, les machomen et compagnie, c'est non merci. Ok? Je suis masseuse, mais le respect c'est de chaque côté. Merci !",
   gender: "Femme",
   mass_or_not: true,
 )
