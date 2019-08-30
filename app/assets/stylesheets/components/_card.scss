@@ -1,0 +1,56 @@
+.card {
+  border-radius: 10px;
+  border-style: none;
+}
+
+.img-massage-type-home {
+  border-radius: 10px 0 0 10px;
+}
+
+.cont_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card.price  h2 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.card-body {
+  padding: 0.9rem;
+  p {
+    line-height: 1rem;
+  }
+}
+
+.card-text {
+  line-height: 1rem;
+}
+
+.massage_list {
+  list-style: none;
+  padding-inline-start: 0;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+}
+
+.card-title a:hover {
+    text-decoration: none;
+}
+
+.massage_list {
+  list-style: none;
+  padding-inline-start: 0;
+  text-align: justify;
+}
+
+.card-title a:hover {
+    text-decoration: none;
+}
+
+#card {
+  max-height: 380px;
+}

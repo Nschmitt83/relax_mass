@@ -1,5 +1,7 @@
-<div class="container-massage">
+
+<div class="container">
   <%= render 'masseurs/masseur_card_large', user: @masseur %>
+
   <div class="row">
     <div class="col-6 d-flex flex-column justify-content-between">
         <%= render 'massages/massages_prices',          masseur: @masseur %>
@@ -10,9 +12,6 @@
       <div class="card p-2 h-100 d-flex justify-content-between">
         <h2 class="text-center my-5">Réservez votre massage</h2>
         <%= render 'bookings/form_add_booking' %>
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-          Réserver
-        </button>
         <div class=" w-100 d-flex justify-content-end mt-5">
           <%= link_to "Retour à la liste", masseurs_path, class: "btn btn-outline-success m-3" %>
         </div>
@@ -21,7 +20,7 @@
   </div>
 </div>
 
-<%= render 'bookings/rdv_card', user: @masseur %>
+<%#= render 'bookings/rdv_card', user: @masseur %>
 
 
 
