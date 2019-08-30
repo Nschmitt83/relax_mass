@@ -25,9 +25,9 @@
 
               <h3>Notes supérieures à</h3>
               <%= f.input :last_name, as: :radio_buttons, label: "", collection: Review::RATING, wrapper: :vertical_collection_inline %>
-
-
-              <%= f.submit "Filtrer", class: "btn btn-info" %>
+              <div class="d-flex justify-content-end">
+                <%= f.submit "Filtrer", class: "btn btn-info mt-3" %>
+              </div>
             <% end %>
         </div>
         <div class="index_cards_masseurs">
