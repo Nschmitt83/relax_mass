@@ -15,7 +15,7 @@ nicolas = User.create!(
   address: "24 rue du Coteau",
   ZIP_code: "92370",
   city: "Chaville",
-  gender: "homme",
+  gender: "Homme",
   mass_or_not: false,
 )
 url0 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566898699/maillot-homme-classique_gfdo28.jpg"
@@ -30,7 +30,7 @@ marie = User.create!(
   address: "4, avenue des champs",
   ZIP_code: "83000",
   city: "Toulon",
-  gender: "femme",
+  gender: "Femme",
   mass_or_not: false,
 )
 
@@ -49,7 +49,7 @@ marguerite  = User.create!(
   ZIP_code: "75001",
   city: "Paris",
   description:"Salut à tous et à toutes, c'est moi Marguerite. J'écris un peu pour arrondir les fins de mois et suis sinon masseuse depuis 10 ans. J'adore mon métier! Look forward to see you guys !",
-  gender: "femme",
+  gender: "Femme",
   mass_or_not: true,
 )
 
@@ -66,7 +66,7 @@ simone  = User.create!(
   ZIP_code: "75006",
   city: "Paris",
   description:"Salut, c'est Simone. Moi, les machomen et compagnie, c'est non merci. Ok? Je suis masseuse, mais le respect c'est de chaques côtés. Merci !",
-  gender: "femme",
+  gender: "Femme",
   mass_or_not: true,
 )
 
@@ -83,7 +83,7 @@ george  = User.create!(
   ZIP_code: "36400",
   city: "Nohant-Vic ",
   description:"Salut les ptits clous. Je suis George Sand, mais rassurez vous je suis bien une femme, lol ! En fait, mon vrai nom est Amantine Dupin, baronne Dudevant (et de derrière ! ;) N'hésitez pas à réserver un massage avec moi, vous ne le regretterez pas !",
-  gender: "femme",
+  gender: "Femme",
   mass_or_not: true,
 )
 
@@ -100,7 +100,7 @@ francoise  = User.create!(
   ZIP_code: "14600",
   city: "Honfleur",
   description:"Salut mes ptites beautés, vous me reconnaissez? C'est moi Françoise Sagan. Vous avez sans doute entendu parler de moi car j'ai écrit 'bonjour tristesse' qui est au programme pour le BAC de Français. Bonjour la décoince mdr. Bref, choose me and you won't regret it ! ;) Bisous <3",
-  gender: "femme",
+  gender: "Femme",
   mass_or_not: true,
 )
 
@@ -117,7 +117,7 @@ zelda  = User.create!(
   ZIP_code: "78350",
   city: "Montgomery",
   description:"Salut les aminches, c'est Zelda Fitzgerald. Je suis la femme ET la muse de mon Francis Scott de mari. Trop bien ? Mais je suis aussi une grand écrivain, ne soyez pas réducteur ! Et le jeu vidéo, ça vient aussi de moi ;) Choisissez moi pour un massage. On ne s'ennuiera pas !",
-  gender: "femme",
+  gender: "Femme",
   mass_or_not: true,
 )
 
@@ -134,7 +134,7 @@ comtesse  = User.create!(
   ZIP_code: "94410",
   city: "Saint Pétersbourg",
   description:"Bonjour à tous, c'est moi Sophie Rostopchine1, mais on me connait mieux sous le nom de la comtesse de Ségur ! J'ai écrit plein de livres pour les petits enfants et ai découvert le massage il y a quelques années avec mon mari. Après une reconversion j'exerce  aujourd'hui ce métier passion et serait heureuse de vous rencontrer pour une séance.",
-  gender: "femme",
+  gender: "Femme",
   mass_or_not: true,
 )
 
@@ -151,7 +151,7 @@ andre  = User.create!(
   ZIP_code: "75007",
   city: "Paris",
   description:"Salut les potaux, moi c'est André Gide ou dédé comme vous voulez ;) J'ai eu le prix nobel, la classe, non ? Bref maintenant pour moi c'est massage, massage, massage. Je vis massage, je bois massage, je mange massage et je dors massage (quand je dors). Au plaisir de vous rencontrer",
-  gender: "homme",
+  gender: "Homme",
   mass_or_not: true,
 )
 
@@ -168,7 +168,7 @@ charles  = User.create!(
   ZIP_code: "83500",
   city: "Los Angeles",
   description:"Salut les amis. Je suis Charles Bukowski, un sacré loustic. J'adore l'écriture, les massages relaxants et les alcools forts. Ma spécialité ? Les pierres chaudes.",
-  gender: "homme",
+  gender: "Homme",
   mass_or_not: true,
 )
 
@@ -185,7 +185,7 @@ michel  = User.create!(
   ZIP_code: "92200",
   city: "Neuilly sur Seine",
   description:"Bonjour chers amis. C'est Michel Houellebecq. Je me suis mis récemment aux massages califoriens notamment et compte affiner ma technique grâce à RelaxMass'. Sinon j'aime bien boire du pinard et fumer des clopes. A très vite ! :)",
-  gender: "homme",
+  gender: "Homme",
   mass_or_not: true,
 )
 
@@ -202,7 +202,7 @@ albert  = User.create!(
   ZIP_code: "Lourmarin",
   city: "Paris",
   description:"Hi everyone ! C'est Albert Camus :) Vous sous souvenez l'Etranger, La peste ? C'était moi ! :) Mais maintenant c'est du passé. Place au bien-être et à la détente ! Je compte sur vous !",
-  gender: "homme",
+  gender: "Homme",
   mass_or_not: true,
 )
 
@@ -219,7 +219,7 @@ bret  = User.create!(
   ZIP_code: "62170",
   city: "Los Angeles",
   description:"Ola Amigos. C'est Bret Easton! Tonnerre de Bret ! ;) lol Pour moi, le roman, c'est fini, je ne crois pas que j'y retournerai un jour ! Par contre, je masse super bien, alors laissez vous tenter !",
-  gender: "homme",
+  gender: "Homme",
   mass_or_not: true,
 )
 
