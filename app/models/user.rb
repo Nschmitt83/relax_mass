@@ -3,8 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   GENRE = ["Homme", "Femme"]
   has_many :massages
-  has_many :bookings, through: :massages
-  has_many :reviews, through: :bookings
+  has_many :bookings
+  has_many :reviews
+
   mount_uploader :avatar, PhotoUploader
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
@@ -13,5 +14,21 @@ class User < ApplicationRecord
 
   def rating
     self.reviews.sum(&:rating) / self.reviews.size.to_f
+  end
+
+  def bookings
+    if self.mass_or_not
+      self.massages.map(&:bookings).flatten
+    else
+      super
+    end
+  end
+
+  def reviews
+    if self.mass_or_not
+      self.bookings.map(&:reviews).flatten
+    else
+      super
+    end
   end
 end
