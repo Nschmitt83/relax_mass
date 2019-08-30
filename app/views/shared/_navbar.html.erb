@@ -8,8 +8,8 @@
   </button>
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <div class="navbar-nav align-items-md-center ">
-      <%= link_to "Comment ça marche ?", "#howitworks", class: "text-info nav-item mr-5" %>
-      <%= link_to "Les types de massage", "#massagetypes", class: "text-info nav-item mr-5" %>
+      <%= link_to "Comment ça marche ?", root_path(:controller => "home", :anchor => "howitworks"), class: "text-info nav-item mr-5" %>
+      <%= link_to "Les types de massage", root_path(:controller => "home", :anchor => "massagetypes"), class: "text-info nav-item mr-5" %>
         <% if user_signed_in? %>
           <p class="mb-0 font-weight-bold mr-3 text-danger nav-item">
             Salut <%= link_to current_user.first_name.capitalize, profil_path(current_user), class: "text-danger" %> !
