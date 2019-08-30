@@ -18,7 +18,7 @@ nicolas = User.create!(
   gender: "Homme",
   mass_or_not: false,
 )
-url0 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566898699/maillot-homme-classique_gfdo28.jpg"
+url0 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174220/xihfkwydz7ucmmhewoub_mnltuc.jpg"
 nicolas.remote_avatar_url = url0
 nicolas.save!
 
@@ -53,7 +53,7 @@ marguerite  = User.create!(
   mass_or_not: true,
 )
 
-url2 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566901490/Marguerite-Yourcenar_auvq5n.png"
+url2 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/lrvcqvxwqfyrbspbcdq2_rhr5mn.png"
 marguerite.remote_avatar_url = url2
 marguerite.save!
 
@@ -70,7 +70,7 @@ simone  = User.create!(
   mass_or_not: true,
 )
 
-url3 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566909264/736535_jianlb.jpg"
+url3 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/dtplfasrvwbgqllrzroy_sabkas.jpg"
 simone.remote_avatar_url = url3
 simone.save!
 
@@ -87,7 +87,7 @@ george  = User.create!(
   mass_or_not: true,
 )
 
-url4 = "https://img-4.linternaute.com/dST2et5eqVwPmhI0d0Dl8WRtozs=/1240x/smart/e7c81af39fae4c12a7be569523fbc1ce/ccmcms-linternaute/10983819.png"
+url4 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/exo3xaa9zv6ehwtq6ai0_hz5rvp.jpg"
 george.remote_avatar_url = url4
 george.save!
 
@@ -96,7 +96,7 @@ francoise  = User.create!(
   password: "nounours",
   first_name: "Françoise",
   last_name: "Sagan",
-  address: "5 avenuedu général de l'armée et de la guerre",
+  address: "5 avenue du général, de l'armée et de la guerre",
   ZIP_code: "14600",
   city: "Honfleur",
   description:"Salut mes ptites beautés, vous me reconnaissez? C'est moi Françoise Sagan. Vous avez sans doute entendu parler de moi car j'ai écrit 'bonjour tristesse' qui est au programme pour le BAC de Français. Bonjour la décoince mdr. Bref, choose me and you won't regret it ! ;) Bisous <3",
@@ -104,7 +104,7 @@ francoise  = User.create!(
   mass_or_not: true,
 )
 
-url5 = "https://static1.purepeople.com/articles/6/31/18/16/@/4414541-francoise-sagan-950x0-3.jpg"
+url5 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174088/uryzuaaxcu2dpme6ijat_my3fxf.jpg"
 francoise.remote_avatar_url = url5
 francoise.save!
 
@@ -121,7 +121,7 @@ zelda  = User.create!(
   mass_or_not: true,
 )
 
-url6 = "https://www.deslettres.fr/wp-content/uploads/2015/08/zelda.jpg"
+url6 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/shnjski1zfiuienbcnqg_xgme2r.jpg"
 zelda.remote_avatar_url = url6
 zelda.save!
 
@@ -138,7 +138,7 @@ comtesse  = User.create!(
   mass_or_not: true,
 )
 
-url7 = "http://www.mamanvogue.fr/wp-content/uploads/2016/02/segur-740x500.png"
+url7 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/onjtseh0lxdp7wa4pher_jdtwwe.png"
 comtesse.remote_avatar_url = url7
 comtesse.save!
 
@@ -155,7 +155,7 @@ andre  = User.create!(
   mass_or_not: true,
 )
 
-url8 = "http://i-exc.ccm2.net/iex/1280/2070937017/744032.jpg"
+url8 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/p9flgyrdybihhua2clcp_fwibdi.jpg"
 andre.remote_avatar_url = url8
 andre.save!
 
@@ -172,7 +172,7 @@ charles  = User.create!(
   mass_or_not: true,
 )
 
-url9 = "http://lesmoutonsrebelles.com/wp-content/uploads/2016/08/charles-bukowski-hulton-getty.jpg"
+url9 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/ga08qqsoplplj7gyhzkt_sjuh3q.jpg"
 charles.remote_avatar_url = url9
 charles.save!
 
@@ -189,7 +189,7 @@ michel  = User.create!(
   mass_or_not: true,
 )
 
-url10 = "https://www.revuedesdeuxmondes.fr/wp-content/uploads/2015/10/150126_r26055-1200-630-15112701-1024x538.jpg"
+url10 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/m8opp7j8ba51rzv8w156_yhex4q.jpg"
 michel.remote_avatar_url = url10
 michel.save!
 
@@ -206,7 +206,7 @@ albert  = User.create!(
   mass_or_not: true,
 )
 
-url11 = "http://i-exc.ccm2.net/iex/1280/2062425379/746509.jpg"
+url11 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174683/zoxttcoadqneelgqsbeh_oaeril.jpg"
 albert.remote_avatar_url = url11
 albert.save!
 
@@ -223,7 +223,7 @@ bret  = User.create!(
   mass_or_not: true,
 )
 
-url12 = "https://i2.wp.com/diacritik.com/wp-content/uploads/2015/12/543fdee652147_-_tnc-bret-easton-ellis-lg.jpg?fit=1024%2C512&ssl=1"
+url12 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/sby0mdpggcbvsldqfwbh_a33dfe.jpg"
 bret.remote_avatar_url = url12
 bret.save!
 
