@@ -17,7 +17,7 @@
 
             <h3>Type de massage</h3>
             <%= simple_form_for @user, url: masseurs_path, method: :get do |f|%>
-            <%= f.input :first_name, label: false, collection: MASSAGE_PRICE_AND_TYPE.keys, selected: @massage_type %>
+            <%= f.input :first_name, label: false, collection: MASSAGE_PRICE_AND_TYPE.keys, prompt: "Selectionner votre massage",selected: @massage_type %>
             <h3>Ma ville</h3>
             <%= f.input :city, label: false, input_html: { value: @city } %>
             <h3>Genre</h3>
