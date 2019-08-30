@@ -25,8 +25,8 @@
   }
 }
 
-.card-text {
-  line-height: 1rem;
+.card-text p{
+  line-height: 1.2rem;
 }
 
 .massage_list {
@@ -34,17 +34,7 @@
   padding-inline-start: 0;
   text-align: justify;
   font-size: 1.1rem;
-  line-height: 1.3rem;
-}
-
-.card-title a:hover {
-    text-decoration: none;
-}
-
-.massage_list {
-  list-style: none;
-  padding-inline-start: 0;
-  text-align: justify;
+  line-height: 1.4rem;
 }
 
 .card-title a:hover {
@@ -52,5 +42,5 @@
 }
 
 #card {
-  max-height: 380px;
+  height: 380px;
 }
