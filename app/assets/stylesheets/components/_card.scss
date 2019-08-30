@@ -37,18 +37,20 @@
   line-height: 1.3rem;
 }
 
-.card-title a:hover {
+.card-title {
+  color: $green;
+  a {
+  color: $green;
+  }
+  a:hover {
     text-decoration: none;
+  }
 }
 
 .massage_list {
   list-style: none;
   padding-inline-start: 0;
   text-align: justify;
-}
-
-.card-title a:hover {
-    text-decoration: none;
 }
 
 #card {
