@@ -1,20 +1,12 @@
 class MasseursController < ApplicationController
   def index
     if params[:user].present?
-      sql_query = " \
-      massages.massage_type ILIKE :type \
-      AND users.city ILIKE :city \
-      AND users.gender ILIKE :gender \
-      "
-      @masseurs = User.joins(:massages).where(sql_query,
-                                              type: "%#{params[:user][:first_name]}%",
-                                              city: "%#{params[:user][:city]}%",
-                                              gender: "%#{params[:user][:gender]}%").uniq
-      @masseurs = @masseurs.select { |masseur| masseur.rating.to_i >= params[:user][:last_name].to_i } if params[:user][:last_name].present?
+      refine
+    elsif params[:search].present?
+      home_search
     else
       @masseurs = User.where(mass_or_not: true)
     end
-    # @title_inject = "A #{params["city"].capitalize}"
     @reviews = @masseurs.map(&:reviews)
     @massage = Massage.new
     @user    = User.new
@@ -24,5 +16,32 @@ class MasseursController < ApplicationController
     @masseur = User.find(params[:id])
     @reviews = @masseur.reviews
     @booking = Booking.new
+  end
+
+  private
+
+  def refine
+    sql_query = " \
+      massages.massage_type ILIKE :type \
+      AND users.city ILIKE :city \
+      AND users.gender ILIKE :gender \
+    "
+    @masseurs = User.joins(:massages).where(sql_query,
+                                            type: "%#{params[:user][:first_name]}%",
+                                            city: "%#{params[:user][:city]}%",
+                                            gender: "%#{params[:user][:gender]}%").uniq
+    @masseurs = @masseurs.select { |masseur| masseur.rating.to_i >= params[:user][:last_name].to_i } if params[:user][:last_name].present?
+    @massage_type = params[:user][:first_name]
+  end
+
+  def home_search
+    sql_query = " \
+      massage_type ILIKE :type \
+      AND city ILIKE :city \
+    "
+    @masseurs = User.joins(:massages).where(sql_query,
+                                            type: "%#{params[:search][:massage_type]}%",
+                                            city: "%#{params[:search][:city]}%").uniq
+    @massage_type = params[:search][:massage_type]
   end
 end
