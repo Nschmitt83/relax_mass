@@ -8,7 +8,7 @@
           <%= simple_form_for :search, url: masseurs_path, method: "get" do |f| %>
             <%= f.input :massage_type, prompt: "Type de massage", label:false , collection: MASSAGE_PRICE_AND_TYPE.keys%>
              <%= f.input :city, input_html: {value: ""}, placeholder: 'Ma ville', label:false %>
-            <%= f.submit "Rechercher", class: "btn btn-info my-3" %>
+            <%= f.submit "Rechercher", class: "btn btn-info mb-5" %>
           <% end %>
 
       </div>

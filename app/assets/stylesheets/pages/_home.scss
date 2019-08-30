@@ -36,6 +36,9 @@
 #finder_card {
   background-color: $grey-green;
   margin-right: -3rem;
+  .form-group {
+    margin-bottom: 15px;
+  }
 }
 
 #white_card {
