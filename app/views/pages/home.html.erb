@@ -3,7 +3,7 @@
   <div class="d-flex justify-content-center">
     <div class="card justify-content-center align-items-end" id="white_card" style="width: 450px">
       <div class="card d-flex justify-content-around pt-4 px-3" id="finder_card" style="width: 400px; height: 400px;">
-        <h3>J’ai pas envie de me déplacer... <strong>Relax Mass'</strong> me trouve un massothérapeute à domicile :</h3>
+        <h3>J’ai pas envie de me déplacer !<br><strong>Relax Mass'</strong> me trouve un massothérapeute à domicile :</h3>
 
           <%= simple_form_for :search, url: masseurs_path, method: "get" do |f| %>
             <%= f.input :massage_type, prompt: "Type de massage", label:false , collection: MASSAGE_PRICE_AND_TYPE.keys%>

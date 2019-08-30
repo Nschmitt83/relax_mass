@@ -2,11 +2,11 @@
 
 <% MASSAGE_PRICE_AND_TYPE.each do |massage, v| %>
   <div class="card mb-3" style="max-width: 900px;">
-    <div class="row no-gutters ">
+    <div class="row no-gutters">
       <div class="col-md-4 rounded-left">
-        <%= cl_image_tag v[:photo],height: 250, width:280, class: "img-massage-type-home" %>
+        <%= cl_image_tag v[:photo],height: 250, width:250, class: "img-massage-type-home" %>
       </div>
-      <div class="col-md-8 pr-4" style="max-height: 250px;">
+      <div class="col-md-8 pr-5" style="max-height: 250px">
         <div class="card-body">
           <h5 class="row card-title"><%= massage %></h5>
           <p class="row card-text"><small class="text-muted"><%= v[:description] %></p></small></p>
