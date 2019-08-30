@@ -21,13 +21,26 @@
   border-radius: 10px;
   position: sticky;
   top: 0;
+  padding: 10px;
   h3 {
     font-size: 1.2rem;
-    cursor:pointer;
   }
   i {
     font-size: 0.8rem;
   }
+}
+.accordion {
+  h3{
+    cursor:pointer;
+  }
+}
+
+.calendar {
+  background-color: lightgrey;
+  height: 25vh;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 @media(max-width: 992px) {
