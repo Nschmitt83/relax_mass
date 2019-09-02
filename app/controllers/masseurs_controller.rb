@@ -16,6 +16,8 @@ class MasseursController < ApplicationController
     @masseur = User.find(params[:id])
     @reviews = @masseur.reviews
     @booking = Booking.new
+    @price = MASSAGE_PRICE_AND_TYPE["Massage Suedois"][:price]
+
   end
 
   private

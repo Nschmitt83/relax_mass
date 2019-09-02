@@ -1,0 +1,17 @@
+<h1>HELLO</h1>
+  <%= console  %>
+  <%= form_tag payments_path do %>
+  <%= hidden_field_tag 'massage_id', @booking.massage.id %>
+  <%= hidden_field_tag 'price', MASSAGE_PRICE_AND_TYPE[@booking.massage[:massage_type]][:price]*100 %>
+  <%= hidden_field_tag 'start_date', @booking.start_date %>
+  <%= hidden_field_tag 'massage_type', @booking.massage[:massage_type] %>
+  <%= hidden_field_tag 'masseur_id', @booking.massage[:user_id] %>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+      data-name="Ma Séance de <%= @booking.massage[:massage_type] %> avec <%= @booking.massage.user[:first_name]%> <%= @booking.massage.user[:last_name]%>"
+      data-email="<%= current_user.email %>"
+      data-description="Le <%= @booking.start_date %>"
+      data-amount="<%= MASSAGE_PRICE_AND_TYPE[@booking.massage[:massage_type]][:price]*100 %>"
+      data-currency="EUR"></script>
+  <% end %>

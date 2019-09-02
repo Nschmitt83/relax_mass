@@ -133,7 +133,7 @@ comtesse  = User.create!(
   address: "543, rue Bolchaïa Morskaïa ",
   ZIP_code: "94410",
   city: "Saint Pétersbourg",
-  description:"Bonjour à tous, c'est moi Sophie Rostopchine1, mais on me connait mieux sous le nom de la comtesse de Ségur ! J'ai écrit plein de livres pour les petits enfants et ai découvert le massage il y a quelques années avec mon mari. Après une reconversion j'exerce  aujourd'hui ce métier passion et serait heureuse de vous rencontrer pour une séance.",
+  description:"Bonjour à tous, c'est moi Sophie Rostopchine, mais on me connait mieux sous le nom de la comtesse de Ségur ! J'ai écrit plein de livres pour les petits enfants et ai découvert le massage il y a quelques années avec mon mari. Après une reconversion, j'exerce aujourd'hui ce métier passion et serai heureuse de vous rencontrer pour une séance.",
   gender: "Femme",
   mass_or_not: true,
 )

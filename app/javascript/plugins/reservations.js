@@ -9,3 +9,5 @@ if(date_massage_form) {
     type_massage_modal.innerText = `${type_massage_form.value}`;
   })
 }
+
+console.log(type_massage_form.value);
