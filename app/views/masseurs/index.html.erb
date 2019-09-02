@@ -25,7 +25,8 @@
 
             <h3>Notes supérieures à</h3>
             <%= f.input :last_name, as: :radio_buttons, label: "", collection: Review::RATING, wrapper: :vertical_collection_inline %>
-            <div class="d-flex justify-content-end">
+            <div class="d-flex justify-content-between">
+              <%= link_to  "Effacer les filtres", masseurs_path, class: "btn btn-outline-success py-1 mt-3 text-center" %>
               <%= f.submit "Filtrer", class: "btn btn-info mt-3" %>
             </div>
             <% end %>
