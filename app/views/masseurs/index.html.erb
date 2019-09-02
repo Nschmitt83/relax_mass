@@ -8,26 +8,27 @@
             <h3 id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fas fa-arrow-right"></i> Date
             </h3>
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <%#= f.input :start_date, label: false,  as: :string, required: false, input_html: {id: "datepicker",class: "d-none"} %>
+              <%= simple_form_for @user, url: masseurs_path, method: :get do |f|%>
+
               <p class="calendar">
-                Ici se situera un "FAT" calendrier
+                <%= f.input :ZIP_code, label: false,  as: :string, required: false, input_html: {id: "datepicker",class: "d-none"} %>
               </p>
             </div>
           </div> <!-- FIN DIV ACCORDION -->
 
             <h3>Type de massage</h3>
-            <%= simple_form_for @user, url: masseurs_path, method: :get do |f|%>
             <%= f.input :first_name, label: false, collection: MASSAGE_PRICE_AND_TYPE.keys, prompt: "Selectionner votre massage",selected: @massage_type %>
             <h3>Ma ville</h3>
             <%= f.input :city, label: false, input_html: { value: @city } %>
             <h3>Genre</h3>
             <%= f.input :gender, label: "", as: :radio_buttons, collection: User::GENRE, wrapper: :vertical_collection_inline %>
 
-              <h3>Notes supérieures à</h3>
-              <%= f.input :last_name, as: :radio_buttons, label: "", collection: Review::RATING, wrapper: :vertical_collection_inline %>
-              <div class="d-flex justify-content-end">
-                <%= f.submit "Filtrer", class: "btn btn-info mt-3" %>
-              </div>
+            <h3>Notes supérieures à</h3>
+            <%= f.input :last_name, as: :radio_buttons, label: "", collection: Review::RATING, wrapper: :vertical_collection_inline %>
+            <div class="d-flex justify-content-between">
+              <%= link_to  "Effacer les filtres", masseurs_path, class: "btn btn-outline-success py-1 mt-3 text-center" %>
+              <%= f.submit "Filtrer", class: "btn btn-info mt-3" %>
+            </div>
             <% end %>
         </div>
         <div class="index_cards_masseurs">
@@ -38,3 +39,4 @@
       </div>
   </div>
 </div>
+
