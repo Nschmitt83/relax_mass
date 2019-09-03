@@ -51,6 +51,7 @@ marguerite  = User.create!(
   description:"Salut à tous et à toutes, c'est moi Marguerite. J'écris un peu pour arrondir les fins de mois et suis sinon masseuse depuis 10 ans. J'adore mon métier! Look forward to see you guys !",
   gender: "Femme",
   mass_or_not: true,
+  siret: 14.times.map{rand(10)}.join.to_s,
 )
 
 url2 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/lrvcqvxwqfyrbspbcdq2_rhr5mn.png"
@@ -68,6 +69,7 @@ simone  = User.create!(
   description:"Salut, c'est Simone. Moi, les machomen et compagnie, c'est non merci. Ok? Je suis masseuse, mais le respect c'est de chaque côté. Merci !",
   gender: "Femme",
   mass_or_not: true,
+  siret: 14.times.map{rand(10)}.join.to_s,
 )
 
 url3 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/dtplfasrvwbgqllrzroy_sabkas.jpg"
@@ -85,6 +87,7 @@ george  = User.create!(
   description:"Salut les ptits clous. Je suis George Sand, mais rassurez vous je suis bien une femme, lol ! En fait, mon vrai nom est Amantine Dupin, baronne Dudevant (et de derrière ! ;) N'hésitez pas à réserver un massage avec moi, vous ne le regretterez pas !",
   gender: "Femme",
   mass_or_not: true,
+  siret: 14.times.map{rand(10)}.join.to_s,
 )
 
 url4 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/exo3xaa9zv6ehwtq6ai0_hz5rvp.jpg"
@@ -102,6 +105,7 @@ francoise  = User.create!(
   description:"Salut mes ptites beautés, vous me reconnaissez? C'est moi Françoise Sagan. Vous avez sans doute entendu parler de moi car j'ai écrit 'bonjour tristesse' qui est au programme pour le BAC de Français. Bonjour la décoince mdr. Bref, choose me and you won't regret it ! ;) Bisous <3",
   gender: "Femme",
   mass_or_not: true,
+  siret: 14.times.map{rand(10)}.join.to_s,
 )
 
 url5 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174088/uryzuaaxcu2dpme6ijat_my3fxf.jpg"
@@ -119,6 +123,7 @@ zelda  = User.create!(
   description:"Salut les aminches, c'est Zelda Fitzgerald. Je suis la femme ET la muse de mon Francis Scott de mari. Trop bien ? Mais je suis aussi une grand écrivain, ne soyez pas réducteur ! Et le jeu vidéo, ça vient aussi de moi ;) Choisissez moi pour un massage. On ne s'ennuiera pas !",
   gender: "Femme",
   mass_or_not: true,
+  siret: 14.times.map{rand(10)}.join.to_s,
 )
 
 url6 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/shnjski1zfiuienbcnqg_xgme2r.jpg"
@@ -136,6 +141,7 @@ comtesse  = User.create!(
   description:"Bonjour à tous, c'est moi Sophie Rostopchine, mais on me connait mieux sous le nom de la comtesse de Ségur ! J'ai écrit plein de livres pour les petits enfants et ai découvert le massage il y a quelques années avec mon mari. Après une reconversion, j'exerce aujourd'hui ce métier passion et serai heureuse de vous rencontrer pour une séance.",
   gender: "Femme",
   mass_or_not: true,
+  siret: 14.times.map{rand(10)}.join.to_s,
 )
 
 url7 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/onjtseh0lxdp7wa4pher_jdtwwe.png"
@@ -153,6 +159,7 @@ andre  = User.create!(
   description:"Salut les potaux, moi c'est André Gide ou dédé comme vous voulez ;) J'ai eu le prix nobel, la classe, non ? Bref maintenant pour moi c'est massage, massage, massage. Je vis massage, je bois massage, je mange massage et je dors massage (quand je dors). Au plaisir de vous rencontrer",
   gender: "Homme",
   mass_or_not: true,
+  siret: 14.times.map{rand(10)}.join.to_s,
 )
 
 url8 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/p9flgyrdybihhua2clcp_fwibdi.jpg"
@@ -170,6 +177,7 @@ charles  = User.create!(
   description:"Salut les amis. Je suis Charles Bukowski, un sacré loustic. J'adore l'écriture, les massages relaxants et les alcools forts. Ma spécialité ? Les pierres chaudes.",
   gender: "Homme",
   mass_or_not: true,
+  siret: 14.times.map{rand(10)}.join.to_s,
 )
 
 url9 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/ga08qqsoplplj7gyhzkt_sjuh3q.jpg"
@@ -187,6 +195,7 @@ michel  = User.create!(
   description:"Bonjour chers amis. C'est Michel Houellebecq. Je me suis mis récemment aux massages califoriens notamment et compte affiner ma technique grâce à RelaxMass'. Sinon j'aime bien boire du pinard et fumer des clopes. A très vite ! :)",
   gender: "Homme",
   mass_or_not: true,
+  siret: 14.times.map{rand(10)}.join.to_s,
 )
 
 url10 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/m8opp7j8ba51rzv8w156_yhex4q.jpg"
@@ -204,6 +213,7 @@ albert  = User.create!(
   description:"Hi everyone ! C'est Albert Camus :) Vous sous souvenez l'Etranger, La peste ? C'était moi ! :) Mais maintenant c'est du passé. Place au bien-être et à la détente ! Je compte sur vous !",
   gender: "Homme",
   mass_or_not: true,
+  siret: 14.times.map{rand(10)}.join.to_s,
 )
 
 url11 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174683/zoxttcoadqneelgqsbeh_oaeril.jpg"
@@ -221,6 +231,7 @@ bret  = User.create!(
   description:"Ola Amigos. C'est Bret Easton! Tonnerre de Bret ! ;) lol Pour moi, le roman, c'est fini, je ne crois pas que j'y retournerai un jour ! Par contre, je masse super bien, alors laissez vous tenter !",
   gender: "Homme",
   mass_or_not: true,
+  siret: 14.times.map{rand(10)}.join.to_s,
 )
 
 url12 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/sby0mdpggcbvsldqfwbh_a33dfe.jpg"
