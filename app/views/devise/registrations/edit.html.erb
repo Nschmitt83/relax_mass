@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="my-4">
+    <h2>Vous souhaitez proposer vos prestations en ligne : <%#= resource_name.to_s.humanize %></h2>
+  </div>
+
+  <%#= simple_form_for(@massage, url: masseur_massages_path(current_user), html: { method: :put }) do |f| %>
+  <%# end %>
+
+
+  <%console%>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= f.error_notification %>
+
+
+    <div class="form-inputs">
+       <%= f.input :email, required: true, autofocus: true %>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+      <% end %>
+      <%= current_user.description %>
+
+      <p>1. Choisissez les types de massage que vous souhaitez proposer : </p>
+
+        <%#= simple_form_for :search, url: masseurs_path, method: "get" do |f| %>
+            <%#= f.input :massage_type, label:false , collection: MASSAGE_PRICE_AND_TYPE.keys, input_html: { multiple: true } %>
+        <%# end %>
+      <%= f.input 'massages',
+                  prompt: "Type de massage",
+                  label:false,
+                  collection: MASSAGE_PRICE_AND_TYPE.keys,
+                  as: :grouped_select %>
+
+      <p>2. Ecrivez une description :</p>
+      <%= f.input :description,
+                   required: false,
+                   input_html: { autocomplete: "Description" }%>
+
+      <p>3. Enregistrez votre certificat ou diplôme : </p>
+      <ul>
+        <li>Pièces jointes acceptées : pdf, jpg, jpeg, png</li>
+        <li>Taille max : 2M</li>
+      </ul>
+
+      <%#= f.input :password,
+                  hint: "leave it blank if you don't want to change it",
+                  required: false,
+                  input_html: { autocomplete: "new-password" } %>
+      <%#= f.input :password_confirmation,
+                  required: false,
+                  input_html: { autocomplete: "new-password" } %>
+      <%#= f.input :current_password,
+                  hint: "we need your current password to confirm your changes",
+                  required: true,
+                  input_html: { autocomplete: "current-password" } %>
+    </div>
+
+  <p>4. Vérifiez vos informations et envoyez votre candidature.
+Nos experts valideront votre profil dans les plus brefs délais.</p>
+    <div class="form-actions">
+      <%= f.button :submit, "Confirmer", class: "btn btn-info mb-5" %>
+    </div>
+  <% end %>
+
+<!--   <h3>Cancel my account</h3> -->
+
+  <!-- <p>Unhappy? <%#= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
+
+  <%= link_to "Retour", :back, class: "btn btn-outline-success" %>
+
+</div>

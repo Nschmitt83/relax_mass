@@ -6,7 +6,10 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :reviews
 
+  accepts_nested_attributes_for :massages, allow_destroy: true
+
   mount_uploader :avatar, PhotoUploader
+  mount_uploader :diploma, PhotoUploader
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   # validates :email, :first_name, :last_name, :address, :ZIP_code, :city, :gender, :mass_or_not

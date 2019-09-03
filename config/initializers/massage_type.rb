@@ -31,3 +31,11 @@ MASSAGE_PRICE_AND_TYPE = {
 
   },
 }
+
+MASSAGE_SELECTION = []
+MASSAGE_PRICE_AND_TYPE.each do |massage|
+  ma = []
+  ma << massage.first
+  ma << massage.first
+  MASSAGE_SELECTION << ma
+end
