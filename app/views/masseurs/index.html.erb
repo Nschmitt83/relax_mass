@@ -29,7 +29,7 @@
           <h1 class="m-4 text-left">LES MASSO-THERAPEUTES <%= @title_inject %></h1>
           <div class="index_cards_masseurs">
             <% @masseurs.each do |masseur| %>
-              <%= render 'masseur_card', masseur: masseur%>
+              <%= render 'masseur_card', masseur: masseur, classname: ""%>
             <% end %>
           </div>
         </div>
