@@ -22,6 +22,9 @@ gem 'flatpickr_rails'
 
 gem "simple_calendar", "~> 2.0"
 
+gem 'money-rails'
+gem 'stripe'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
