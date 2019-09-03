@@ -13,7 +13,7 @@
         <div class="form-wrapper" >
           <div class="card-body justify-content-center">
             <%= simple_form_for [@masseur, @booking] , method: :get, url: new_masseur_booking_path(@masseur.id) do |f| %>
-              <%= f.input :massage, label: false, prompt: "Choisissez votre massage", collection: @masseur.massages.map(&:massage_type), class: "my-5 massage_name"  %>
+              <%= f.input :massage, label: false, prompt: "Choisissez votre massage", collection: @masseur.massages.map(&:massage_type), selected: params[:massage_type], class: "my-5 massage_name"  %>
               <p class="text-center my-2" >Choisissez la date et l'heure:</p>
               <%= f.input :start_date, label: false,  as: :string, required: false, input_html: {id: "datetimepicker",class: "d-none booking_date"} %>
               <div class="w-100 d-flex justify-content-center" data-toggle="modal" data-target="#exampleModal">
