@@ -10,4 +10,4 @@ if(date_massage_form) {
   })
 }
 
-console.log(type_massage_form.value);
+// console.log(type_massage_form.value);
