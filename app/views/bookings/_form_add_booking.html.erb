@@ -1,6 +1,6 @@
 <!-- rename _form.html.erb -->
-<div class="form-wrapper" >
   <div class="card-body justify-content-center">
+<div class="form-wrapper" >
     <%= simple_form_for [masseur, booking] , url: masseur_bookings_path(@masseur.id) do |f| %>
       <%= f.input :massage, label: false, prompt: "Choisissez votre massage", collection: @masseur.massages.map(&:massage_type), class: "my-5"  %>
       <p class="text-center my-2" >Choisissez la date et l'heure:</p>
