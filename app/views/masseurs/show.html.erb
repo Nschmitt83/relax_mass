@@ -21,23 +21,18 @@
               </div>
           </div>
         </div>
-        <button type="button" style="width: 30%; margin:auto;" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-          Réserver
-        </button>
-
-
-        <div class=" w-100 d-flex justify-content-end mt-5">
+        <div class="payment_buttons">
           <%= link_to "Retour à la liste", masseurs_path, class: "btn btn-outline-success m-3" %>
+          <%= f.button :submit, "Valider", class: "btn btn-info m-3" %>
+          <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-
-
-  <!-- MODAL DE CONFIRMATION -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- FEU MODAL DE CONFIRMATION -->
+<!--   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div style= "border-radius: 10px" class="modal-content">
         <div class="modal-header" style="border-style: none">
@@ -50,23 +45,18 @@
           <p>Vous avez rendez-vous le <strong><span class="date_modal"></span></strong>
              pour une séance de <strong><span class="massage_type_modal"></span></strong> avec :</p>
           <div class="d-flex justify-content-center">
-          <%= render 'masseurs/masseur_card', masseur: @masseur %>
+          <%#= render 'masseurs/masseur_card', masseur: @masseur %>
           </div>
           <div class="d-flex justify-content-center">
-            <%= link_to "Annuler", masseur_path(@masseur), class: "btn btn-outline-success mr-3" %>
-            <%= f.button :submit, "Valider", class: "btn btn-info" %>
-            <% end %>
-          </div>
+ -->            <%#= link_to "Annuler", masseur_path(@masseur), class: "btn btn-outline-success mr-3" %>
+            <%#= f.button :submit, "Valider", class: "btn btn-info" %>
+            <%# end %>
+<!--           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- FIN DE MODAL DE CONFIRMATION -->
+ --><!-- FIN DE FEU MODAL DE CONFIRMATION -->
 
 <div id="booking-form-div" data-bookings ="<%= @bookings_date.to_json %>">
 </div>
-
-<!-- FIN DE MODAL DE CONFIRMATION -->
-<div id="booking-form-div" data-bookings ="<%= @bookings_date.to_json %>">
-</div>
-
