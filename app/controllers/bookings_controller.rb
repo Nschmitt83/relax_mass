@@ -1,4 +1,11 @@
 class BookingsController < ApplicationController
+
+  def new
+    @booking = Booking.new(booking_params)
+    @booking.massage = Massage.find_by(massage_type: params[:booking][:massage], user: User.find(params[:masseur_id]))
+    @booking.user    = current_user
+  end
+
   def create
     @booking         = Booking.new(booking_params)
     @booking.user    = current_user
@@ -7,6 +14,7 @@ class BookingsController < ApplicationController
     # FIND BY
     # @massage         = @masseur.massages.find_by(massage_type: params[:booking][:massage])
     @booking.massage = @massage.first
+
     if @booking.save
       redirect_to profil_path(current_user)
     else
@@ -20,6 +28,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date)
+    params.require(:booking).permit(:start_date, :masseur)
   end
 end

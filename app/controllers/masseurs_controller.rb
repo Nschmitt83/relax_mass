@@ -16,10 +16,15 @@ class MasseursController < ApplicationController
     @masseur = User.find(params[:id])
     @reviews = @masseur.reviews
     @booking = Booking.new
+
+    @price = MASSAGE_PRICE_AND_TYPE["Massage Suedois"][:price]
+
+
     @bookings = @masseur.bookings
     @bookings_date = @bookings.map do |booking|
       { from: booking.start_date, to: booking.start_date + 59.minutes }
     end
+
   end
 
   private
