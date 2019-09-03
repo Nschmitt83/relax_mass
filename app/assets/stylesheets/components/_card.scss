@@ -1,11 +1,9 @@
 .card {
-  border-radius: 10px;
+  border-radius: 4px;
   border-style: none;
+  border: 1px solid $green;
 }
 
-.img-massage-type-home {
-  border-radius: 10px 0 0 10px;
-}
 
 .cont_price {
   display: flex;

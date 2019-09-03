@@ -1,13 +1,28 @@
-<div class="container">
-  <h1 class="my-4">MON COMPTE</h1>
-  <div class="row">
-    <div class="col-6">
-      <%= render 'profils/card_presentation_user', user: @user %>
-      <%= render 'profils/to_become_massotheraps' %>
-    </div>
-    <div class="col-6">
-      <%= render 'bookings/rdv_card', booking: @last_booking, masseur: @masseur %>
-      <%= render 'bookings/last_bookings_card', user: @user %>
+<% if current_user.mass_or_not == false %>
+  <div class="container">
+    <h1 class="my-4 text-center text-md-left">MON COMPTE</h1>
+    <div class="row flex-column flex-md-row justify-content-center">
+      <div class="col-12 col-md-6">
+        <%= render 'profils/card_presentation_user', user: @user %>
+        <%= render 'profils/to_become_massotheraps', classname: "d-none d-md-block"%>
+      </div>
+      <div class="col-12 col-md-6 ">
+        <%= render 'bookings/rdv_card', booking: @last_booking, masseur: @masseur %>
+        <%= render 'bookings/last_bookings_card', user: @user %>
+        <%= render 'profils/to_become_massotheraps', classname: "d-block d-md-none" %>
+      </div>
     </div>
   </div>
-</div>
+<% else %>
+  <div class="container">
+    <h1 class="my-4">MON COMPTE PROFESSIONNEL</h1>
+    <%= render 'masseurs/masseur_card_large', user: @user %>
+    <div class="row">
+      <div class="col-6 d-flex flex-column justify-content-between">
+          <%= render 'massages/massages_prices',          masseur: @user %>
+          <%= render 'masseurs/description_masseur_card', masseur: @user %>
+          <%= render 'reviews/reviews_card',              reviews: @reviews %>
+      </div>
+    </div>
+  </div>
+<% end %>

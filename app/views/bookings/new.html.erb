@@ -17,7 +17,7 @@
           <strong><%= @booking.massage[:massage_type] %></strong> avec :
         </p>
         <div class="payment_recap">
-          <%= render 'masseurs/masseur_card', masseur: User.find(params[:masseur_id]) %>
+          <%= render 'masseurs/masseur_card', masseur: User.find(params[:masseur_id]), classname: "" %>
         </div>
         <div class="payment_buttons">
           <button class="btn btn-outline-success" style="padding-top: 0;padding-bottom: 0; border-radius: 5px;">Retour

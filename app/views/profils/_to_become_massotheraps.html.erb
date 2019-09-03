@@ -1,13 +1,15 @@
-<div class="card p-4 my-3" style="max-width: 35rem;">
-  <h2>Vous êtes massothérapeute ?</h2>
-  <div class="card-body d-flex flex-column align-items-end">
-    <div class="card-text">
-        <ol>
-          <li>Sélectionnez le type de prestation que vous souhaitez proposer</li>
-          <li>Envoyez votre certificat d’aptitude ou diplôme</li>
-          <li>Dès la validation de nos experts, remplissez votre agenda</li>
-        </ol>
+ <div class="<%= classname %>">
+  <div class="card p-4 my-3" style="max-width: 35rem;">
+    <h2>Vous êtes massothérapeute ?</h2>
+    <div class="card-body d-flex flex-column align-items-end">
+      <div class="card-text">
+          <ol>
+            <li>Sélectionnez le type de prestation que vous souhaitez proposer</li>
+            <li>Envoyez votre certificat d’aptitude ou diplôme</li>
+            <li>Dès la validation de nos experts, remplissez votre agenda</li>
+          </ol>
+      </div>
     </div>
-    <%= link_to "Postuler", "#", class: "btn btn-info" %>
+    <%= link_to "Postuler", edit_profil_path, class: "btn btn-info" %>
   </div>
 </div>
