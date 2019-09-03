@@ -1,18 +1,14 @@
 <!-- rename _card_large.html.erb -->
 
 <% MASSAGE_PRICE_AND_TYPE.each do |massage, v| %>
-  <div class="card mb-3" style="max-width: 900px;">
-    <div class="row no-gutters">
-      <div class="col-md-4 rounded-left">
-        <%= cl_image_tag v[:photo],height: 250, width:250, class: "img-massage-type-home" %>
-      </div>
-      <div class="col-md-8 pr-5" style="max-height: 250px">
-        <div class="card-body">
-          <h5 class="row card-title"><%= massage %></h5>
-          <p class="row card-text"><small class="text-muted"><%= v[:description] %></p></small></p>
-          <p class="row card-text"><small>Durée : 1 heure</small></p>
-          <p class="row card-text"><strong>Prix : <%= v[:price] %> €</strong></p>
-        </div>
+  <div class="card mb-3 flex-lg-row justify-content-center align-items-center" style="min-width: 240px;">
+      <%= cl_image_tag v[:photo],height: 250, width:250, class: "rounded-left" %>
+    <div class="p-2" >
+      <div class="card-body">
+        <h5 class="row card-title"><%= massage %></h5>
+        <p class="row card-text"><small class="text-muted"><%= v[:description] %></p></small></p>
+        <p class="row card-text"><small>Durée : 1 heure</small></p>
+        <p class="row card-text"><strong>Prix : <%= v[:price] %> €</strong></p>
       </div>
     </div>
   </div>
