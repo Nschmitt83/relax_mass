@@ -18,7 +18,7 @@ flatpickr("#datetimepicker", {
   dateFormat: "Y-m-d H:i",
   minTime: "09:00",
   maxTime: "16:59",
-  "disable": bookings,
+  // "disable": bookings,
 })
 }
 

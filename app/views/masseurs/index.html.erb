@@ -1,20 +1,14 @@
 <div class="container">
   <div class="row justify-content-center">
-    <h1 class="m-4 text-left">LES MASSO-THERAPEUTES <%= @title_inject %></h1>
+
       <div class="col-12 cd-lg-10 masseurs_container">
-        <div class="filtres" id="filter">
+        <div class="filtres mr-3 mt-1" id="filter">
           <h1 class="text-info">Filtrez moi !</h1>
           <div class="accordion" id="accordionExample">
-            <h3 id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fas fa-arrow-right"></i> Date
-            </h3>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <h3> Date </h3>
               <%= simple_form_for @user, url: masseurs_path, method: :get do |f|%>
-
-              <p class="calendar">
-                <%= f.input :ZIP_code, label: false,  as: :string, required: false, input_html: {id: "datepicker",class: "d-none"} %>
-              </p>
-            </div>
-          </div> <!-- FIN DIV ACCORDION -->
+                <%= f.input :ZIP_code, label: false,  as: :string, required: false, input_html: {id: "datepicker", class: "d-none"} %>
+          </div>
 
             <h3>Type de massage</h3>
             <%= f.input :first_name, label: false, collection: MASSAGE_PRICE_AND_TYPE.keys, prompt: "Selectionner votre massage",selected: @massage_type %>
@@ -31,10 +25,13 @@
             </div>
             <% end %>
         </div>
-        <div class="index_cards_masseurs">
-          <% @masseurs.each do |masseur| %>
-            <%= render 'masseur_card', masseur: masseur %>
-          <% end %>
+        <div class="d-flex flex-column align-items-center">
+          <h1 class="m-4 text-left">LES MASSO-THERAPEUTES <%= @title_inject %></h1>
+          <div class="index_cards_masseurs">
+            <% @masseurs.each do |masseur| %>
+              <%= render 'masseur_card', masseur: masseur, classname: ""%>
+            <% end %>
+          </div>
         </div>
       </div>
   </div>

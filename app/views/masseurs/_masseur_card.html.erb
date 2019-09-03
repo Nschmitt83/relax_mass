@@ -1,4 +1,4 @@
-<div class="card" id="card">
+<div class="card <%= classname %>" id="card">
   <div class="card-body d-flex flex-column justify-content-between align-items-stretch">
     <div class="d-flex align-items-center justify-content-around">
       <%= link_to masseur_path(masseur.id) do %>
@@ -20,9 +20,9 @@
       <p>Ville: <%= masseur.city %></p>
       <% average = masseur.reviews.sum(&:rating) / masseur.reviews.size.to_f %>
       <p>
-        <% masseur.rating.round.times do %> <i class="fa fa-star gold text-primary"></i>
+        <% masseur.rating.round.times do %> <i class="fa fa-star gold text-info"></i>
         <% end %>
-        <% (5 - masseur.rating).round(half: :down).times do %> <i class="far fa-star gold text-primary"></i>
+        <% (5 - masseur.rating).round(half: :down).times do %> <i class="far fa-star gold text-info"></i>
         <% end %>
       </p>
     </div>
