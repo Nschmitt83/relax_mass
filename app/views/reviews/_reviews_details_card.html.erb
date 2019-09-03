@@ -3,9 +3,9 @@
     <div class="notif_title d-flex justify-content-between">
       <h5>De <%= review.user.first_name %> <%= review.user.last_name %> </h5>
       <p>
-        <% review.rating.times do %> <i class="fa fa-star gold text-primary"></i>
+        <% review.rating.times do %> <i class="fa fa-star gold text-info"></i>
         <% end %>
-        <% (5 - review.rating).round.times do %> <i class="far fa-star gold text-primary"></i>
+        <% (5 - review.rating).round.times do %> <i class="far fa-star gold text-info"></i>
         <% end %>
       </p>
     </div>

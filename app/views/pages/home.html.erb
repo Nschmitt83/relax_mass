@@ -1,8 +1,8 @@
 
 <div class="banner">
   <div class="d-flex flex-md-row justify-content-center flex-sm-column-reverse align-items-center">
-    <div class="card shadow-none justify-content-center  align-items-md-end align-items-sm-center " id="white_card" style="width: 450px">
-      <div class="card d-flex justify-content-around pt-4 px-3 mt-sm-n5" id="finder_card" style="width: 400px; height: 400px;">
+    <div class="card shadow-none justify-content-center  align-items-md-end align-items-center " id="white_card" style="width: 450px">
+      <div class="card d-flex justify-content-around pt-4 px-3 mr-0 mr-md-n5 border-0 shadow" id="finder_card" style="max-width: 400px; max-height: 400px;">
         <h3>J’ai pas envie de me déplacer !<br><strong>Relax Mass'</strong> me trouve un massothérapeute à domicile :</h3>
 
           <%= simple_form_for :search, url: masseurs_path, method: "get" do |f| %>
@@ -15,7 +15,7 @@
 
       </div>
     </div>
-    <div class="illustration">
+    <div class="illustration d-none d-md-block">
       <%= cl_image_tag("massage_01_cjguia", width: 500, crop: :fill) %>
     </div>
   </div>
@@ -28,19 +28,19 @@
       <!-- refacto dans une card -->
       <div class="text-center pr-4">
        <!--  <h3>1</h3> -->
-        <%= cl_image_tag("004-smartphone_nttmt2", width: 100, crop: :fill, class:"picto-home", color:"#ffffff", effect:"grayscale") %>
+        <%= cl_image_tag("004-smartphone_nttmt2", width: 100, crop: :fill, class:"picto-home",effect:"colorize", color: "#ff715b") %>
         <p><strong>Réservez un massage à domicile</strong></p>
         <p>Vous avez peu de temps devant vous ? Nous proposons des massages à domicile ou sur votre lieu de travail.</p>
       </div>
       <div class="text-center">
       <!--   <h3>2</h3> -->
-        <%= cl_image_tag("013-massage_rjd6wc", width: 100, crop: :fill, class:"picto-home", color:"#ffffff", effect:"grayscale") %>
+        <%= cl_image_tag("013-massage_rjd6wc", width: 100, crop: :fill, class:"picto-home", effect:"colorize", color: "#ff715b") %>
         <p><strong>Des professionnels de confiance</strong></p>
         <p>Tous nos massothérapeuthes sont certifiés et leur profil a été vérifié par notre plate-forme.</p>
       </div>
       <div class="text-center pl-4">
     <!--     <h3>3</h3> -->
-        <%= cl_image_tag("008-customer_btmlyg", width: 100, crop: :fill, class:"picto-home", color:"#ffffff", effect:"grayscale") %>
+        <%= cl_image_tag("008-customer_btmlyg", width: 100, crop: :fill, class:"picto-home", effect:"colorize", color: "#ff715b") %>
         <p><strong>Des prestations évaluées</strong></p>
         <p>Consultez les avis laissés sur les masseurs et laissez des commentaires après la séance de massage.</p>
       </div>

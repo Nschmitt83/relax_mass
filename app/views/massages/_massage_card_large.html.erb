@@ -1,8 +1,8 @@
 <!-- rename _card_large.html.erb -->
 
 <% MASSAGE_PRICE_AND_TYPE.each do |massage, v| %>
-  <div class="card mb-3 flex-lg-row justify-content-center" style="min-width: 240px;">
-      <%= cl_image_tag v[:photo],height: 250, width:250, class: "img-massage-type-home " %>
+  <div class="card mb-3 flex-lg-row justify-content-center align-items-center" style="min-width: 240px;">
+      <%= cl_image_tag v[:photo],height: 250, width:250, class: "rounded-left" %>
     <div class="p-2" >
       <div class="card-body">
         <h5 class="row card-title"><%= massage %></h5>

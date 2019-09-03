@@ -2,13 +2,13 @@
 <div class="container">
   <%= render 'masseurs/masseur_card_large', user: @masseur %>
 
-  <div class="row mt-4">
-    <div class="col-6 d-flex flex-column justify-content-between">
+  <div class="row flex-column-reverse  flex-md-row mt-4">
+    <div class="col-12 col-md-6 d-flex flex-column justify-content-between">
         <%= render 'massages/massages_prices',          masseur: @masseur %>
         <%= render 'masseurs/description_masseur_card', user: @masseur %>
         <%= render 'reviews/reviews_card',              reviews: @reviews %>
     </div>
-    <div class="col-6">
+    <div class="col-12 col-md-6 mb-3">
       <div class="card p-2 h-100 d-flex justify-content-between">
         <h2 class="text-center my-5">Réservez votre massage</h2>
         <div class="form-wrapper" >
