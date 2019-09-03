@@ -1,8 +1,10 @@
 class MasseursController < ApplicationController
   def index
     if params[:user].present?
+      @params_to_transfer = { massage_type: params[:user][:first_name] }
       refine
     elsif params[:search].present?
+      @params_to_transfer = { massage_type: params[:search][:massage_type] }
       home_search
     else
       @masseurs = User.where(mass_or_not: true)
@@ -19,12 +21,10 @@ class MasseursController < ApplicationController
 
     @price = MASSAGE_PRICE_AND_TYPE["Massage Suedois"][:price]
 
-
     @bookings = @masseur.bookings
     @bookings_date = @bookings.map do |booking|
       { from: booking.start_date, to: booking.start_date + 59.minutes }
     end
-
   end
 
   private
