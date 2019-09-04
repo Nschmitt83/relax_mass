@@ -1,5 +1,6 @@
 class ProfilsController < ApplicationController
   def show
+    @params_to_transfer = {}
     @user = User.find(params[:id])
     if @user.mass_or_not == false
       @last_booking = @user.bookings.last
