@@ -16,10 +16,11 @@
               <%= f.input :massage, label: false, prompt: "Choisissez votre massage", collection: @masseur.massages.map(&:massage_type), selected: params[:massage_type], class: "my-5 massage_name"  %>
               <p class="text-center my-2" >Choisissez la date et l'heure:</p>
               <%= f.input :start_date, label: false,  as: :string, required: false, input_html: {id: "datetimepicker",class: "d-none booking_date"} %>
-              <%= select_tag(:time, options_for_select(["9H", "10H", "11H", "12H", "13H", "14H", "15H", "16H", "17H"] ), class: "custom-select my-1 mr-sm-2") %>
+              <div class="d-flex justify-content-center">
+                <%= select_tag(:time, options_for_select(["9H", "10H", "11H", "12H", "13H", "14H", "15H", "16H", "17H", "18H", "19H", "20H"], class: "text-center"), class: "custom-select w-75", id: "time_select",prompt: "Choisissez votre horaire") %>
+                </div>
               <div class="w-100 d-flex justify-content-center" data-toggle="modal" data-target="#exampleModal">
               </div>
-              <%=  params[:start_date].to_date.hour = params[:time] if params[:start_date].present? %>
           </div>
         </div>
         <div class="payment_buttons">
@@ -31,7 +32,6 @@
     </div>
   </div>
 </div>
-<%= console %>
 
 <!-- FEU MODAL DE CONFIRMATION -->
 <!--   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -59,3 +59,5 @@
     </div>
   </div>
  --><!-- FIN DE FEU MODAL DE CONFIRMATION -->
+  <div id="bookings-dates" data-bookings_dates ="<%= @bookings_dates.to_json %>">
+  </div>

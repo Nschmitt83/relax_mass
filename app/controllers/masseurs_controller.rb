@@ -20,15 +20,17 @@ class MasseursController < ApplicationController
     @reviews = @masseur.reviews
     @booking = Booking.new
     @price = MASSAGE_PRICE_AND_TYPE["Massage Suedois"][:price]
-
     @bookings = @masseur.bookings
+    @bookings_dates = @bookings.map(&:start_date)
+  end
 
+  def availablilty
   end
 
   private
 
   def availablity(masseur, date)
-    hours = (9...17).to_a
+    hours = (9...20).to_a
     bookings_select = masseur.bookings.select { |booking| booking.start_date.to_date == date.to_date }
     bookings_hours = bookings_select.map { |b| b.start_date.hour }
     p bookings_hours
