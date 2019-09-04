@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
 
   def new
+    @params_to_transfer = {}
     @booking = Booking.new(booking_params)
     @booking.massage = Massage.find_by(massage_type: params[:booking][:massage], user: User.find(params[:masseur_id]))
     @booking.user    = current_user
