@@ -1,4 +1,5 @@
 class MasseursController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @params_to_transfer = {}
     if params[:user].present?
