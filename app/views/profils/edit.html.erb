@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="my-4">
+  <div class="my-5">
     <h1>INSCRIPTION MASSOTHERAPEUTE</h1>
-    <p>Vous souhaitez proposer des prestations de massage en ligne, complétez votre profil et faites nous parvenir un document justifiant de vos compétences !</p>
+    <p>Vous souhaitez proposer des prestations de massage en ligne, complétez votre profil :</p>
   </div>
 
   <%= form_tag(profil_path(current_user), method: :put) do %>
@@ -17,17 +17,11 @@
             <%= label_tag("Prénom :") %>
             <%= text_field(:user, :first_name, value: current_user.first_name, class: "form-control mb-2") %>
           </div>
-<!--           <div class="col">
- -->            <%#= label_tag("email :") %>
-            <%#= text_field(:user, :email, value: current_user.email, class: "form-control mb-2") %>
-          <!-- </div> -->
           <div class="col">
             <%= label_tag(:capital, "SIRET (14 chiffres) :") %>
             <%= text_field(:user, :siret, value: current_user.siret, class: "form-control", maxlength: 14) %>
           </div>
         </div>
-
-
 
       <div class="form-group my-4">
         <p><strong>2. Sélectionnez les types de massage que vous souhaitez proposer : </strong></p>
@@ -48,7 +42,6 @@
 
         <%= file_field_tag(:diploma, class: "mb-3", accept: ".png,.jpeg,.pdf", max_file_size: 1) %>
         <%= hidden_field_tag(:diploma_cache) %>
-
 
       </div>
     </div>
