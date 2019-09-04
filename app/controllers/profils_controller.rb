@@ -17,7 +17,6 @@ class ProfilsController < ApplicationController
 
   def update
     user = User.find(current_user.id)
-    user.email = params[:user][:email]
     user.first_name = params[:user][:first_name]
     user.last_name = params[:user][:last_name]
     user.siret = params[:user][:siret]
