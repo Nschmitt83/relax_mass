@@ -1,5 +1,6 @@
 class MasseursController < ApplicationController
   def index
+    @params_to_transfer = {}
     if params[:user].present?
       @params_to_transfer = { massage_type: params[:user][:first_name] }
       refine
