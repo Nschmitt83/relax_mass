@@ -7,5 +7,5 @@ if(actual_payment_modal) {
   })
 }
 
-console.log(actual_payment_modal.value);
-console.log(wanted_payment_modal.value);
+// console.log(actual_payment_modal.value);
+// console.log(wanted_payment_modal.value);
