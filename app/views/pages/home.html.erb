@@ -6,12 +6,12 @@
 
             <%= simple_form_for :search, url: masseurs_path, method: "get" do |f| %>
               <%= f.input :massage_type, prompt: "Type de massage", label:false , collection: MASSAGE_PRICE_AND_TYPE.keys%>
-               <%= f.input :city, input_html: {value: ""}, placeholder: 'Ma ville', class: "city_content", label:false %>
+               <%= f.input :city, placeholder: "Ma ville", label:false, input_html: { class: "city_content", id: "city_form", value: ""} %>
                <div class="d-flex justify-content-center">
                 <%= f.submit "Rechercher", class: "btn btn-info mb-5" %>
                </div>
             <% end %>
-            <%= link_to "Me localiser", root_path, remote: true, class: "text-center btn btn-outline-success" %>
+            <%= link_to "Me localiser", root_path, remote: true, class: "text-center btn btn-outline-success", id: "current-location" %>
         </div>
       </div>
       <div class="illustration d-none d-md-block">
