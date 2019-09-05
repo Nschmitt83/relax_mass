@@ -2,11 +2,13 @@
   <h2>Mes RDV précédents</h2>
   <div class="card-body d-flex align-items-center">
     <div class="card-text">
-      <% user.bookings.last(2).each do |booking| %>
-        <p>
-          <strong><%= booking.massage.massage_type %></strong>   par <strong><%= booking.massage.user.first_name %> <%= booking.massage.user.last_name %></strong>
-          </br>Le <strong><%= booking.start_date %></strong>
-        </p>
+      <% unless user.bookings.empty? %>
+        <% user.bookings.last(2).each do |booking| %>
+          <p>
+            <strong><%= booking.massage.massage_type %></strong>   par <strong><%= booking.massage.user.first_name %> <%= booking.massage.user.last_name %></strong>
+            </br>Le <strong><%= booking.start_date %></strong>
+          </p>
+        <% end %>
       <% end %>
     </div>
   </div>
