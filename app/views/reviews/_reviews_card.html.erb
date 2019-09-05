@@ -5,4 +5,8 @@
       <%= render 'reviews/reviews_details_card', review: review %>
     <% end %>
   <% end %>
+  <% if advice_yes %>
+   <a href="mailto:contact@relaxmass.fit?subject=Mon%20avis%20sur%20le%20massage%20de%20<%= @masseur.first_name %>%20<%= @masseur.last_name %>" class="text-right" title="Tous les avis sont validés par nos modérateurs avant publication">Laissez un avis sur <%= @masseur.first_name %></a>
+  <% end %>
 </div>
+
