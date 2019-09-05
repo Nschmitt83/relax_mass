@@ -199,7 +199,7 @@ michel  = User.create!(
   siret: "52753641281624",
 )
 
-url10 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/m8opp7j8ba51rzv8w156_yhex4q.jpg"
+url10 = "https://res.cloudinary.com/dvmytrwrd/image/upload/c_scale,w_632/v1567689465/hx9lexruxdocche291wj.jpg"
 michel.remote_avatar_url = url10
 michel.save!
 

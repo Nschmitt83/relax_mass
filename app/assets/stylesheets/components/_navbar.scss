@@ -1,3 +1,4 @@
+
 .text-dark.nav-item{
   padding: 0 10px;
 }
@@ -18,4 +19,17 @@
 
 .navbar-brand p {
     margin-top: unset;
+}
+
+@media (max-width: 400px) {
+
+  #logo-title {
+    display: none;
+
+  }
+
+  .relax_header {
+    display: flex;
+    justify-content: space-between;
+  }
 }
