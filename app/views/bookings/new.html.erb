@@ -1,36 +1,38 @@
-<%= form_tag payments_path do %>
-<%= hidden_field_tag 'price', MASSAGE_PRICE_AND_TYPE[@booking.massage[:massage_type]][:price]*100 %>
-<%= hidden_field_tag 'start_date', @booking.start_date %>
-<%= hidden_field_tag 'massage_type', @booking.massage[:massage_type] %>
-<%= hidden_field_tag 'masseur_id', @booking.massage[:user_id] %>
-<% d = DateTime.parse(@booking.start_date.to_s) %>
+<div class="container d-flex justify-content-center align-items-center">
+  <%= form_tag payments_path do %>
+  <%= hidden_field_tag 'price', MASSAGE_PRICE_AND_TYPE[@booking.massage[:massage_type]][:price]*100 %>
+  <%= hidden_field_tag 'start_date', @booking.start_date %>
+  <%= hidden_field_tag 'massage_type', @booking.massage[:massage_type] %>
+  <%= hidden_field_tag 'masseur_id', @booking.massage[:user_id] %>
+  <% d = DateTime.parse(@booking.start_date.to_s) %>
 
-  <div class="modal-dialog" role="document">
-    <div style= "border-radius: 10px" class="modal-content">
-      <div class="modal-header" style="border-style: none">
-        <h1 style="margin:auto" >VOTRE PROCHAIN RDV</h1>
-      </div>
-      <div class="modal-body" style="width: 60%; margin:auto;">
-        <p>Vous avez rendez-vous le
-          <strong><%= d.day %>/<%= d.month %>/<%= d.year %> à <%= d.hour %> H
-          </strong>pour une séance de
-          <strong><%= @booking.massage[:massage_type] %></strong> avec :
-        </p>
-        <div class="payment_recap">
-          <%= render 'masseurs/masseur_card', masseur: User.find(params[:masseur_id]), classname: "" %>
+    <div class="modal-dialog" role="document">
+      <div style= "border-radius: 10px" class="modal-content">
+        <div class="modal-header" style="border-style: none">
+          <h1 style="margin:auto" >VOTRE PROCHAIN RDV</h1>
         </div>
-        <div class="checkout_buttons">
-          <%= link_to "Retour", masseur_path(@booking.massage[:user_id]), class: "btn btn-outline-success return_button" %>
-          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-name="<%= @booking.massage[:massage_type] %>"
-            data-email="<%= current_user.email %>"
-            data-description="Le <%= d.day %>/<%= d.month %>/<%= d.year %> - <%= @booking.massage.user[:first_name]%> <%= @booking.massage.user[:last_name]%>"
-            data-amount="<%= MASSAGE_PRICE_AND_TYPE[@booking.massage[:massage_type]][:price]*100 %>"
-            data-currency="EUR">
-          </script>
+        <div class="modal-body">
+          <p>Vous avez rendez-vous le
+            <strong><%= d.day %>/<%= d.month %>/<%= d.year %> à <%= d.hour %> H
+            </strong>pour une séance de
+            <strong><%= @booking.massage[:massage_type] %></strong> avec :
+          </p>
+          <div class="payment_recap">
+            <%= render 'masseurs/masseur_card', masseur: User.find(params[:masseur_id]), classname: "" %>
+          </div>
+          <div class="checkout_buttons">
+            <%= link_to "Retour", masseur_path(@booking.massage[:user_id]), class: "btn btn-outline-success return_button" %>
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-name="<%= @booking.massage[:massage_type] %>"
+              data-email="<%= current_user.email %>"
+              data-description="Le <%= d.day %>/<%= d.month %>/<%= d.year %> - <%= @booking.massage.user[:first_name]%> <%= @booking.massage.user[:last_name]%>"
+              data-amount="<%= MASSAGE_PRICE_AND_TYPE[@booking.massage[:massage_type]][:price]*100 %>"
+              data-currency="EUR">
+            </script>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

@@ -18,8 +18,8 @@
             <%= text_field(:user, :first_name, value: current_user.first_name, class: "form-control mb-2") %>
           </div>
           <div class="col">
-            <%= label_tag(:capital, "SIRET (14 chiffres) :") %>
-            <%= text_field(:user, :siret, value: current_user.siret, class: "form-control", maxlength: 14) %>
+            <%= label_tag(:capital, "SIRET :") %>
+            <%= text_field(:user, :siret, value: current_user.siret, class: "form-control", length: 14) %>
           </div>
         </div>
 

@@ -15,15 +15,15 @@
   </div>
 <% else %>
   <div class="container">
-    <h1 class="my-4">MON COMPTE PROFESSIONNEL</h1>
+    <h1 class="my-4 text-center text-md-left">MON COMPTE PROFESSIONNEL</h1>
     <%= render 'masseurs/masseur_card_large', user: @user %>
-    <div class="row">
-      <div class="col-6 d-flex flex-column justify-content-between">
+    <div class="row flex-column  flex-md-row mt-4">
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-between">
           <%= render 'massages/massages_prices',          masseur: @user %>
           <%= render 'masseurs/description_masseur_card', masseur: @user %>
           <%= render 'reviews/reviews_card',              reviews: @reviews %>
       </div>
-      <div class="col-6 d-flex flex-column justify-content-between">
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-between">
         <%= render 'profils/card_planning' %>
       </div>
     </div>

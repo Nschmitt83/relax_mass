@@ -6,11 +6,17 @@ import rangePlugin from "flatpickr/dist/plugins/rangePlugin"
 flatpickr("#datetimepicker", {
   minDate: "today",
   inline: true,
-  // enableTime: true,
   dateFormat: "Y-m-d",
-  // minTime: "09:00",
-  // maxTime: "16:59",
-
+  defaultDate: "today",
+  "disable": [
+        function(date) {
+            // return true to disable
+            return date.getDay() === 0 ;
+        }
+    ],
+    "locale": {
+        "firstDayOfWeek": 1 // start week on Monday
+    }
 })
 
 
