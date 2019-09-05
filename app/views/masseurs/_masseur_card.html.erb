@@ -3,7 +3,7 @@
     <div class="d-flex align-items-center justify-content-around">
       <%= link_to masseur_path(masseur.id, params: @params_to_transfer) do %>
         <%= cl_image_tag "#{masseur.avatar}",crop: :fill, height: 100, width: 100, class: "avatar-large" %>
-      <% end %>
+        <% end %>
       <div class="d-flex flex-column align-items-center">
         <h4 class="card-title">
           <%= link_to "#{masseur.first_name} #{masseur.last_name} ", masseur_path(masseur.id, params: @params_to_transfer) %>
