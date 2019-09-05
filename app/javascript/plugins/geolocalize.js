@@ -3,7 +3,7 @@ const currentLocationLink = document.getElementById('current-location');
 const cityForm = document.getElementById('city_form');
 
 const fetchCity = (coordinates) => {
-  fetch(`http://api.opencagedata.com/geocode/v1/json?q=${coordinates.lat}+${coordinates.lon}&key=${apiKey}`)
+  fetch(`https://api.opencagedata.com/geocode/v1/json?q=${coordinates.lat}+${coordinates.lon}&key=${apiKey}`)
   .then(response => response.json())
   .then(data => {
     const city = data.results[0].components.city;
