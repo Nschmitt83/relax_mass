@@ -20,7 +20,7 @@
     <p class="card-text"><%= masseur.description %></p>
     <div class="d-flex justify-content-between align-items-end">
       <p>Ville: <%= masseur.city %></p>
-      <% unless masseur.rating.nan? %>
+      <% unless masseur.rating.nil? %>
         <p>
           <% masseur.rating.round.times do %> <i class="fa fa-star gold text-primary"></i>
           <% end %>
