@@ -4,7 +4,7 @@
   <title>Relax! cette page n'existe pas (erreur 404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
+  .error-page {
     background-color: white;
     color: #ff6602;
     text-align: center;
@@ -17,22 +17,44 @@
     align-items: center;
   }
 
-  .rails-default-error-page a {
+  .error-page a {
     color: #0da59e;
     text-decoration: none;
     padding: 10px 30px;
     border-size: 1px;
   }
 
- .rails-default-error-page div.dialog {
-    display: flex;
-    justify-content: space-around;
-    max-width: 34em;
-  }
-
- .rails-default-error-page div.text {
+ .error-page div.text {
   margin-top: 2em;
  }
+
+ .container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 34em;
+ }
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+    flex-direction: column;
+  }
+}
 
 /*  .rails-default-error-page div.dialog > div {
     border: 1px solid #CCC;
@@ -70,17 +92,20 @@
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body class="error-page">
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
+  <div class="container">
     <div class="text">
       <h1>Keep Relax!</h1>
-        <h2>Cette page n'existe pas (erreur 404)</h2>
+      <h2>Cette page n'existe pas (erreur 404)</h2>
       <a href="/" class="btn btn-outline-success m-3">Retour sur la page d'accueil</a>
-      </div>
-    <div>
+    </div>
+    <div class="img">
       <img src="massage_back.png" alt="Massage" width="400px">
     </div>
   </div>
+</div>
+
+
 </body>
 </html>
