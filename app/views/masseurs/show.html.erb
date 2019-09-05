@@ -17,7 +17,7 @@
               <p class="text-center my-2" >Choisissez la date et l'heure:</p>
               <%= f.input :start_date, label: false,  as: :string, required: false, input_html: {id: "datetimepicker",class: "d-none booking_date"} %>
               <div class="d-flex justify-content-center">
-              <%= select_tag(:time, options_for_select(["9H", "10H", "11H", "12H", "13H", "14H", "15H", "16H", "17H", "18H", "19H", "20H"], class: "text-center"), class: "custom-select w-75", id: "time_select",prompt: "Choisissez votre horaire") %>
+              <%= select_tag(:time, options_for_select(["09H", "10H", "11H", "12H", "13H", "14H", "15H", "16H", "17H", "18H", "19H", "20H"], class: "text-center"), class: "custom-select w-75", id: "time_select",prompt: "Choisissez votre horaire") %>
                 </div>
               <div class="w-100 d-flex justify-content-center" data-toggle="modal" data-target="#exampleModal">
               </div>

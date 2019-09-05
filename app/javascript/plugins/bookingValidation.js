@@ -17,11 +17,13 @@ if (select1){
 
   const changeButtonState = (value, N) => {
     const button = document.getElementById('validation-button');
-    const check = value != ""
+    const check = value != "";
 
-    let v_arr = button.dataset.validation.split(',');
-    v_arr[N] = check ? '1' : '0';
-    button.dataset.validation = v_arr.toString();
+    button.dataset.validation = button.dataset.validation.split(',').map((elt, ind) => { return ind === N ? '1' : elt }).toString();
+
+    // let v_arr = button.dataset.validation.split(',');
+    // v_arr[N] = check ? '1' : '0';
+    // button.dataset.validation = v_arr.toString();
 
     if (button.dataset.validation.split(',').every(b => b == '1')) { button.disabled = false }
     else { button.disabled = true };

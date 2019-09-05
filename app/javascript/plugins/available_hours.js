@@ -5,7 +5,7 @@ const timeSelect = document.getElementById("time_select");
 if (bookingDates){
   const bookings = JSON.parse(bookingDates.dataset.bookings_dates);
 
-  const allHours = ["9H", "10H", "11H", "12H", "13H", "14H", "15H", "16H", "17H", "18H", "19H", "20H"];
+  const allHours = ["09H", "10H", "11H", "12H", "13H", "14H", "15H", "16H", "17H", "18H", "19H", "20H"];
 
 
   const dateInput = document.getElementById("datetimepicker");
