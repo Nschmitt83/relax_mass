@@ -17,7 +17,9 @@
       </div>
     </div>
     <p class="mr-3">
-      <strong><em>Note Moyenne : <%= user.rating.round(1) %> /5</em></strong>
+      <% unless user.rating.nan? %>
+        <strong><em>Note Moyenne : <%= user.rating.round(1) %> /5</em></strong>
+      <% end %>
     </p>
   </div>
 </div>
