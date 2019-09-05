@@ -1,13 +1,13 @@
 <div class="container">
-  <div class="my-4">
-    <h1>INSCRIPTION</h1>
-    <p>Vous souhaitez proposer des prestations de massage en ligne, complétez votre profil et faites nous parvenir un document justifiant de vos compétences !</p>
+  <div class="my-5">
+    <h1>INSCRIPTION MASSOTHERAPEUTE</h1>
+    <p>Vous souhaitez proposer des prestations de massage en ligne, complétez votre profil :</p>
   </div>
 
   <%= form_tag(profil_path(current_user), method: :put) do %>
     <div class="form-inputs">
       <div class="my-4">
-        <p><strong>1. Vos informations : </strong></p>
+        <p><strong>1. Vérifiez vos informations et renseignez votre numéro de SIRET : </strong></p>
         <div class="form-row">
           <div class="col">
             <%= label_tag("Nom :") %>
@@ -17,42 +17,32 @@
             <%= label_tag("Prénom :") %>
             <%= text_field(:user, :first_name, value: current_user.first_name, class: "form-control mb-2") %>
           </div>
-        </div>
-        <div class="form-row">
           <div class="col">
-            <%= label_tag("email :") %>
-            <%= text_field(:user, :email, value: current_user.email, class: "form-control mb-2") %>
-          </div>
-          <div class="col">
-            <%= label_tag("SIRET :") %>
-            <%= text_field(:user, :siret, value: current_user.siret, class: "form-control") %>
+            <%= label_tag(:capital, "SIRET (14 chiffres) :") %>
+            <%= text_field(:user, :siret, value: current_user.siret, class: "form-control", maxlength: 14) %>
           </div>
         </div>
-
-
 
       <div class="form-group my-4">
-        <p><strong>2. Les types de massage que vous souhaitez proposer : </strong></p>
-        <%= select_tag(:massages, options_for_select(MASSAGE_SELECTION), multiple: true, class: "custom-select my-1 mr-sm-2") %>
+        <p><strong>2. Sélectionnez les types de massage que vous souhaitez proposer : </strong></p>
+        <%= select_tag(:massages, options_for_select(MASSAGE_SELECTION), multiple: true, class: "custom-select my-1 mr-sm-2", required: true, size: "5") %>
       </div>
       <div class="form-group my-4">
-      <p><strong>3. Description de votre profil :</strong></p>
+      <p><strong>3. Décrivez-vous en quelques lignes (formation, expérience, spécialité, ...) :</strong></p>
         <%= text_area(:user, :description, class: "form-control mb-2", rows: 3)%>
       </div>
 
       <div class="mb-4">
-        <p><strong>4. Votre certificat ou diplôme * : </strong></p>
+        <p><strong>4. Veuillez nous envoyer votre certificat ou diplôme : </strong></p>
         <ul>
-          <li>Pièces jointes acceptées : pdf, jpg, jpeg, png</li>
-          <li>Taille max : 2M</li>
+          <li><em>Pièces jointes acceptées : pdf, jpg, jpeg, png</em></li>
+          <li><em>Votre document ne sera pas diffusé en ligne. Il permettra simplement à nos experts de valider votre profil.</em></li>
+
         </ul>
 
-        <%= file_field_tag(:diploma, class: "mb-3") %>
+        <%= file_field_tag(:diploma, class: "mb-3", accept: ".png,.jpeg,.pdf", max_file_size: 1) %>
         <%= hidden_field_tag(:diploma_cache) %>
 
-        <p>
-        <em>* Votre document ne sera pas diffusé en ligne. Il permettra à nos experts de valider votre profil.</em>
-        </p>
       </div>
     </div>
   <div class="d-flex justify-content-between">

@@ -5,8 +5,10 @@
         <%= cl_image_tag "#{masseur.avatar}",crop: :fill, height: 100, width: 100, class: "avatar-large" %>
         <% end %>
       <div class="d-flex flex-column align-items-center">
-        <h4 class="card-title"><%= link_to "#{masseur.first_name} #{masseur.last_name} ", masseur_path(masseur.id, params: @params_to_transfer) %></h4>
-          <% unless masseur.massages.empty? %>
+        <h4 class="card-title">
+          <%= link_to "#{masseur.first_name} #{masseur.last_name} ", masseur_path(masseur.id, params: @params_to_transfer) %>
+      </h4>
+        <% unless masseur.massages.empty? %>
           <ul class="massage_list">
           <% masseur.massages.each do |massage| %>
             <li><%= massage.massage_type %></li>
