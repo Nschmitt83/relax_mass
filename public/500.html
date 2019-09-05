@@ -10,11 +10,15 @@
     text-align: center;
     font-family: 'Actor', sans-serif !important;
     margin: 0;
-    font-size: 32px;
+    font-size: 24px;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+   .rails-default-error-page div.dialog {
+    max-width: 33em;
   }
 
 /*  .rails-default-error-page div.dialog {
@@ -64,7 +68,10 @@
   <div class="dialog">
     <div>
       <h1>Oups...</h1>
-      <h2>Veuillez nous excuser pour le dysfonctionnement (500)</h2>
+      <h2>Veuillez nous excuser pour le dysfonctionnement (erreur 500)</h2>
+    </div>
+    <div>
+      <img src="massage_sitdown.png" alt="Massage" width="400px">
     </div>
   </div>
 </body>
