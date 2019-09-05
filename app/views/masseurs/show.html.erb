@@ -5,7 +5,7 @@
     <div class="col-12 col-md-6 d-flex flex-column justify-content-between">
         <%= render 'massages/massages_prices',          masseur: @masseur %>
         <%= render 'masseurs/description_masseur_card', masseur: @masseur %>
-        <%= render 'reviews/reviews_card',              reviews: @reviews %>
+        <%= render 'reviews/reviews_card',              reviews: @reviews, advice_yes: true %>
     </div>
     <div class="col-12 col-md-6 mb-3">
       <div class="card p-2 h-100 d-flex justify-content-between">

@@ -21,7 +21,7 @@
       <div class="col-6 d-flex flex-column justify-content-between">
           <%= render 'massages/massages_prices',          masseur: @user %>
           <%= render 'masseurs/description_masseur_card', masseur: @user %>
-          <%= render 'reviews/reviews_card',              reviews: @reviews %>
+          <%= render 'reviews/reviews_card',              reviews: @reviews, advice_yes: false%>
       </div>
       <div class="col-6 d-flex flex-column justify-content-between">
         <%= render 'profils/card_planning' %>

@@ -14,19 +14,20 @@ nicolas = User.create!(
   last_name: "Smith",
   address: "24 rue du Coteau",
   ZIP_code: "92370",
-  city: "Chaville",
+  city: "Lille",
   gender: "Homme",
   mass_or_not: false,
 )
+
 url0 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174220/xihfkwydz7ucmmhewoub_mnltuc.jpg"
 nicolas.remote_avatar_url = url0
 nicolas.save!
 
-marie = User.create!(
-  email: "marie@gmail.com",
+marmouz = User.create!(
+  email: "marmouz@gmail.com",
   password: "nounours",
-  first_name: "Marie",
-  last_name: "Smith",
+  first_name: "Marmouz",
+  last_name: "Lafaust",
   address: "4, avenue des champs",
   ZIP_code: "83000",
   city: "Toulon",
@@ -35,8 +36,8 @@ marie = User.create!(
 )
 
 url1 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1566803501/wff126qjo2ubcrsortwx.jpg"
-marie.remote_avatar_url = url1
-marie.save!
+marmouz.remote_avatar_url = url1
+marmouz.save!
 
 puts "create 11 masseurs"
 
@@ -82,8 +83,8 @@ george  = User.create!(
   first_name: "George",
   last_name: "Sand",
   address: "Château de Nohant",
-  ZIP_code: "36400",
-  city: "Nohant-Vic ",
+  ZIP_code: "59000",
+  city: "Lille",
   description:"Salut les ptits clous. Je suis George Sand, mais rassurez vous je suis bien une femme, lol ! En fait, mon vrai nom est Amantine Dupin, baronne Dudevant (et de derrière ! ;) N'hésitez pas à réserver un massage avec moi, vous ne le regretterez pas !",
   gender: "Femme",
   mass_or_not: true,
@@ -100,8 +101,8 @@ francoise  = User.create!(
   first_name: "Françoise",
   last_name: "Sagan",
   address: "5 avenue du général, de l'armée et de la guerre",
-  ZIP_code: "14600",
-  city: "Honfleur",
+  ZIP_code: "59000",
+  city: "Lille",
   description:"Salut mes ptites beautés, vous me reconnaissez? C'est moi Françoise Sagan. Vous avez sans doute entendu parler de moi car j'ai écrit 'bonjour tristesse' qui est au programme pour le BAC de Français. Bonjour la décoince mdr. Bref, choose me and you won't regret it ! ;) Bisous <3",
   gender: "Femme",
   mass_or_not: true,
@@ -118,8 +119,8 @@ zelda  = User.create!(
   first_name: "Zelda",
   last_name: "Fitzgerald",
   address: "33, mai road",
-  ZIP_code: "78350",
-  city: "Montgomery",
+  ZIP_code: "59000",
+  city: "Lille",
   description:"Salut les aminches, c'est Zelda Fitzgerald. Je suis la femme ET la muse de mon Francis Scott de mari. Trop bien ? Mais je suis aussi une grand écrivain, ne soyez pas réducteur ! Et le jeu vidéo, ça vient aussi de moi ;) Choisissez moi pour un massage. On ne s'ennuiera pas !",
   gender: "Femme",
   mass_or_not: true,
@@ -136,9 +137,9 @@ comtesse  = User.create!(
   first_name: "Comtesse",
   last_name: "De Ségur",
   address: "543, rue Bolchaïa Morskaïa ",
-  ZIP_code: "94410",
-  city: "Saint Pétersbourg",
-  description:"Bonjour à tous, c'est moi Sophie Rostopchine, mais on me connait mieux sous le nom de la comtesse de Ségur ! J'ai écrit plein de livres pour les petits enfants et ai découvert le massage il y a quelques années avec mon mari. Après une reconversion, j'exerce aujourd'hui ce métier passion et serai heureuse de vous rencontrer pour une séance.",
+  ZIP_code: "59000",
+  city: "Lille",
+  description:"Bonjour à tous, c'est moi Sophie Rostopchine. Ceci dit, on me connait mieux comme la comtesse de Ségur ! J'ai écrit plein de livres pour les petits enfants et ai découvert le massage il y a quelques années avec mon mari. Après une reconversion, j'exerce aujourd'hui ce métier passion et serai heureuse de vous rencontrer pour une séance.",
   gender: "Femme",
   mass_or_not: true,
   siret: "38345378831218",
@@ -172,8 +173,8 @@ charles  = User.create!(
   first_name: "Charles",
   last_name: "Bukowski",
   address: "21, san pedro road",
-  ZIP_code: "83500",
-  city: "Los Angeles",
+  ZIP_code: "59000",
+  city: "Lille",
   description:"Salut les amis. Je suis Charles Bukowski, un sacré loustic. J'adore l'écriture, les massages relaxants et les alcools forts. Ma spécialité ? Les pierres chaudes.",
   gender: "Homme",
   mass_or_not: true,
@@ -190,8 +191,8 @@ michel  = User.create!(
   first_name: "Michel",
   last_name: "Houellebecq",
   address: "58 rue du général De Gaulles",
-  ZIP_code: "92200",
-  city: "Neuilly sur Seine",
+  ZIP_code: "59000",
+  city: "Lille",
   description:"Bonjour chers amis. C'est Michel Houellebecq. Je me suis mis récemment aux massages califoriens notamment et compte affiner ma technique grâce à RelaxMass'. Sinon j'aime bien boire du pinard et fumer des clopes. A très vite ! :)",
   gender: "Homme",
   mass_or_not: true,
@@ -226,8 +227,8 @@ bret  = User.create!(
   first_name: "Bret Easton",
   last_name: "Ellis",
   address: "1024 Abbey Road",
-  ZIP_code: "62170",
-  city: "Los Angeles",
+  ZIP_code: "59000",
+  city: "Lille",
   description:"Ola Amigos. C'est Bret Easton! Tonnerre de Bret ! ;) lol Pour moi, le roman, c'est fini, je ne crois pas que j'y retournerai un jour ! Par contre, je masse super bien, alors laissez vous tenter !",
   gender: "Homme",
   mass_or_not: true,
@@ -317,7 +318,7 @@ massages15 = Massage.create!(
 
 massages16 = Massage.create!(
   massage_type: "Massage Suedois",
-  user: comtesse
+  user: zelda
 )
 
 massages17 = Massage.create!(
@@ -331,13 +332,13 @@ massages18 = Massage.create!(
 )
 
 massages19 = Massage.create!(
-  massage_type: "Shiatsu",
+  massage_type: "Réflexologie",
   user: comtesse
 )
 
 massages20 = Massage.create!(
-  massage_type: "Réflexologie",
-  user: comtesse
+  massage_type: "Shiatsu",
+  user: andre
 )
 
 massages21 = Massage.create!(
@@ -409,7 +410,7 @@ booking2 = Booking.create!(
   start_date: "2019-06-08 18:00:00"
 )
 booking3 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages4,
   start_date: "2019-06-08 16:00:00"
 )
@@ -421,24 +422,24 @@ booking4 = Booking.create!(
 )
 
 booking5 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages7,
   start_date: "2019-06-11 09:00:00"
 )
 
 booking6 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages7,
   start_date: "2019-06-11 11:00:00"
 )
 booking7 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages9,
   start_date: "2019-06-14 16:00:00"
 )
 
 booking8 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages10,
   start_date: "2019-06-14 17:00:00"
 )
@@ -450,7 +451,7 @@ booking9 = Booking.create!(
 )
 
 booking10 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages12,
   start_date: "2019-06-15 18:00:00"
 )
@@ -462,7 +463,7 @@ booking11 = Booking.create!(
 )
 
 booking12 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages14,
   start_date: "2019-06-17 20:00:00"
 )
@@ -480,7 +481,7 @@ booking14 = Booking.create!(
 )
 
 booking15 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages18,
   start_date: "2019-06-20 09:00:00"
 )
@@ -492,7 +493,7 @@ booking16 = Booking.create!(
 )
 
 booking17 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages21,
   start_date: "2019-06-25 16:00:00"
 )
@@ -510,19 +511,19 @@ booking19 = Booking.create!(
 )
 
 booking20 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages26,
   start_date: "2019-07-02 19:00:00"
 )
 
 booking21 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages26,
   start_date: "2019-07-10 20:00:00"
 )
 
 booking22 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages27,
   start_date: "2019-07-10 11:00:00"
 )
@@ -546,7 +547,7 @@ booking25 = Booking.create!(
 )
 
 booking26 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages29,
   start_date: "2019-08-14 18:00:00"
 )
@@ -558,13 +559,13 @@ booking27 = Booking.create!(
 )
 
 booking28 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages30,
   start_date: "2019-08-16 16:00:00"
 )
 
 booking29 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages30,
   start_date: "2019-08-17 10:00:00"
 )
@@ -576,7 +577,7 @@ booking30 = Booking.create!(
 )
 
 booking31 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages31,
   start_date: "2019-08-28 14:00:00"
 )
@@ -594,7 +595,7 @@ booking33 = Booking.create!(
 )
 
 booking34 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages7,
   start_date: "2019-09-11 11:00:00"
 )
@@ -606,25 +607,25 @@ booking35 = Booking.create!(
 )
 
 booking36 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages12,
   start_date: "2019-09-16 18:00:00"
 )
 
 booking37 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages14,
   start_date: "2019-09-17 20:00:00"
 )
 
 booking38 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages18,
   start_date: "2019-09-20 09:00:00"
 )
 
 booking39 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages21,
   start_date: "2019-09-25 16:00:00"
 )
@@ -636,7 +637,7 @@ booking40 = Booking.create!(
 )
 
 booking41 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages27,
   start_date: "2019-09-10 11:00:00"
 )
@@ -648,7 +649,7 @@ booking42 = Booking.create!(
 )
 
 booking43 = Booking.create!(
-  user: marie,
+  user: marmouz,
   massage: massages31,
   start_date: "2019-10-19 14:00:00"
 )
