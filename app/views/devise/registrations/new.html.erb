@@ -1,29 +1,90 @@
-<div class="container">
-
-<h2>Créer un compte</h2>
-
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
-
-    <div class="form-inputs">
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
-    </div>
-
-    <div class="form-actions">
-      <%= f.button :submit, "Créer compte", class: "btn btn-info mb-5" %>
-    </div>
-  <% end %>
-
-  <%= render "devise/shared/links" %>
-
+<div class="container my-5">
+  <div class="row justify-content-center">
+      <div class="col-8 bg-white">
+        <h2>Inscrivez vous</h2>
+        <div class="form-inputs">
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= f.error_notification %>
+            <div class="form-row mb-0">
+              <div class="form-group col-md-6 mb-0">
+                <%= f.input :first_name,
+                          label: "Prénom",
+                          required: true,
+                          autofocus: true%>
+              </div>
+              <div class="form-group col-md-6 mb-0">
+                <%= f.input :last_name,
+                            label: "Nom",
+                            required: true,
+                            autofocus: true%>
+              </div>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline mb-0">
+              <%= f.input :gender,
+                          label:"",
+                          as: :radio_buttons,
+                          wrapper: :vertical_collection_inline,
+                          collection: User:: GENRE,
+                          required: true,
+                          autofocus: true%>
+            </div>
+            <div class="form-group mb-0">
+              <%= f.input :avatar,
+                          label: "Avatar",
+                          required: true,
+                          autofocus: true%>
+              <%= f.input :avatar_cache,
+                          as: :hidden,
+                          required: true,
+                          autofocus: true%>
+            </div>
+            <div class="form-group mb-0">
+              <%= f.input :address,
+                          label: "Adresse",
+                          required: true,
+                          autofocus: true%>
+            </div>
+             <div class="form-row mb-0">
+              <div class="form-group col-md-6 mb-0">
+                <%= f.input :ZIP_code,
+                            label: "CP",
+                            required: true,
+                            autofocus: true%>
+              </div>
+              <div class="form-group col-md-6 mb-0">
+                <%= f.input :city,
+                            label: "Ville",
+                            required: true,
+                            autofocus: true%>
+              </div>
+            </div>
+            <div class="form-group mb-0">
+              <%= f.input :email,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" }%>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6 mb-0">
+                <%= f.input :password,
+                            label: "Mot de passe",
+                            required: true,
+                            hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                            input_html: { autocomplete: "new-password" } %>
+              </div>
+              <div class="form-group col-md-6 mb-0">
+                <%= f.input :password_confirmation,
+                            label: "Confirmation du mot de passe",
+                            required: true,
+                            input_html: { autocomplete: "new-password" } %>
+              </div>
+            </div>
+            <div class="form-actions d-flex justify-content-center">
+              <%= f.button :submit, "Sign up", class:"btn btn-info my-2 my-sm-0" %>
+            </div>
+          <% end %>
+        </div>
+      <%= render "devise/shared/links" %>
+      </div>
+  </div>
 </div>

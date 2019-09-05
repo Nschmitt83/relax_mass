@@ -24,6 +24,7 @@ gem "simple_calendar", "~> 2.0"
 
 gem 'money-rails'
 gem 'stripe'
+gem 'geocoder'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

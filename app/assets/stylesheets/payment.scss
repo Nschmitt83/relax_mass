@@ -2,7 +2,12 @@
   width: 80%;
   margin: auto;
 }
-.payment_buttons {
+.checkout_buttons {
   display: flex;
   justify-content: space-around;
+}
+.return_button {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 5px
 }

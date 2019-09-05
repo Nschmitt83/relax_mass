@@ -16,11 +16,14 @@
               <%= f.input :massage, label: false, prompt: "Choisissez votre massage", collection: @masseur.massages.map(&:massage_type), selected: params[:massage_type], class: "my-5 massage_name"  %>
               <p class="text-center my-2" >Choisissez la date et l'heure:</p>
               <%= f.input :start_date, label: false,  as: :string, required: false, input_html: {id: "datetimepicker",class: "d-none booking_date"} %>
+              <div class="d-flex justify-content-center">
+              <%= select_tag(:time, options_for_select(["9H", "10H", "11H", "12H", "13H", "14H", "15H", "16H", "17H", "18H", "19H", "20H"], class: "text-center"), class: "custom-select w-75", id: "time_select",prompt: "Choisissez votre horaire") %>
+                </div>
               <div class="w-100 d-flex justify-content-center" data-toggle="modal" data-target="#exampleModal">
               </div>
           </div>
         </div>
-        <div class="payment_buttons">
+        <div class="checkout_buttons">
           <%= link_to "Retour à la liste", masseurs_path, class: "btn btn-outline-success m-3" %>
           <%= f.button :submit, "Valider", class: "btn btn-info m-3" %>
           <% end %>
@@ -56,6 +59,5 @@
     </div>
   </div>
  --><!-- FIN DE FEU MODAL DE CONFIRMATION -->
-
-<div id="booking-form-div" data-bookings ="<%= @bookings_date.to_json %>">
-</div>
+  <div id="bookings-dates" data-bookings_dates ="<%= @bookings_dates.to_json %>">
+  </div>

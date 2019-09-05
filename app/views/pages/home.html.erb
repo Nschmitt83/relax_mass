@@ -1,65 +1,67 @@
+<div class="bg-white">
+  <div class="banner">
+    <div class="d-flex flex-md-row justify-content-center flex-sm-column-reverse align-items-center">
+      <div class="card shadow-none justify-content-center  align-items-md-end align-items-center " id="white_card" style="width: 450px">
+        <div class="card d-flex justify-content-around pt-4 px-3 mr-0 mr-md-n5 border-0 shadow" id="finder_card" style="max-width: 400px; max-height: 400px;">
+          <h3>J’ai pas envie de me déplacer !<br><strong>Relax Mass'</strong> me trouve un massothérapeute à domicile :</h3>
 
-<div class="banner">
-  <div class="d-flex flex-md-row justify-content-center flex-sm-column-reverse align-items-center">
-    <div class="card shadow-none justify-content-center  align-items-md-end align-items-center " id="white_card" style="width: 450px">
-      <div class="card d-flex justify-content-around pt-4 px-3 mr-0 mr-md-n5 border-0 shadow" id="finder_card" style="max-width: 400px; max-height: 400px;">
-        <h3>J’ai pas envie de me déplacer !<br><strong>Relax Mass'</strong> me trouve un massothérapeute à domicile :</h3>
-
-          <%= simple_form_for :search, url: masseurs_path, method: "get" do |f| %>
-            <%= f.input :massage_type, prompt: "Type de massage", label:false , collection: MASSAGE_PRICE_AND_TYPE.keys%>
-             <%= f.input :city, input_html: {value: ""}, placeholder: 'Ma ville', label:false %>
-             <div class="d-flex justify-content-center">
-              <%= f.submit "Rechercher", class: "btn btn-info mb-5" %>
-             </div>
-          <% end %>
+            <%= simple_form_for :search, url: masseurs_path, method: "get" do |f| %>
+              <%= f.input :massage_type, prompt: "Type de massage", label:false , collection: MASSAGE_PRICE_AND_TYPE.keys%>
+               <%= f.input :city, placeholder: "Ma ville", label:false, input_html: { class: "city_content", id: "city_form", value: ""} %>
+               <div class="d-flex justify-content-center">
+                <%= f.submit "Rechercher", class: "btn btn-info mb-5" %>
+               </div>
+            <% end %>
+            <%= link_to "Me localiser", root_path, remote: true, class: "text-center btn btn-outline-success", id: "current-location" %>
+        </div>
       </div>
-    </div>
-    <div class="illustration d-none d-md-block">
-      <%= cl_image_tag("massage_01_cjguia", width: 500, crop: :fill) %>
+      <div class="illustration d-none d-md-block">
+        <%= cl_image_tag("massage_01_cjguia", width: 500, crop: :fill) %>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container project-intro" id="home-container">
-  <div class="row justify-content-center">
-    <h2 id="howitworks">Comment ça marche ?</h2>
-    <div class="three-steps d-flex flex-md-row flex-column justify-content-between">
-      <!-- refacto dans une card -->
-      <div class="text-center pr-4">
-       <!--  <h3>1</h3> -->
-        <%= cl_image_tag("004-smartphone_nttmt2", width: 100, crop: :fill, class:"picto-home",effect:"colorize", color: "#ff6602") %>
-        <p><strong>Réservez un massage à domicile</strong></p>
-        <p>Vous avez peu de temps devant vous ? Nous proposons des massages à domicile ou sur votre lieu de travail.</p>
-      </div>
-      <div class="text-center">
-      <!--   <h3>2</h3> -->
-        <%= cl_image_tag("013-massage_rjd6wc", width: 100, crop: :fill, class:"picto-home", effect:"colorize", color: "#ff6602") %>
-        <p><strong>Des professionnels de confiance</strong></p>
-        <p>Tous nos massothérapeuthes sont certifiés et leur profil a été vérifié par notre plate-forme.</p>
-      </div>
-      <div class="text-center pl-4">
-    <!--     <h3>3</h3> -->
-        <%= cl_image_tag("008-customer_btmlyg", width: 100, crop: :fill, class:"picto-home", effect:"colorize", color: "#ff6602") %>
-        <p><strong>Des prestations évaluées</strong></p>
-        <p>Consultez les avis laissés sur les masseurs et laissez des commentaires après la séance de massage.</p>
-      </div>
-    </div>
-    <div class="d-flex justify-content-center">
-      <%= link_to "Voir tous les massothérapeuthes", masseurs_path, class: "btn btn-outline-success m-3"  %>
-    </div>
-  </div>
-</div>
 
-<div class="massage-types">
-  <div class="container">
+  <div class="container project-intro mb-5" id="home-container">
     <div class="row justify-content-center">
-      <div class="col-12 col-lg-10 py-4">
-        <h2 id="massagetypes">Types de massage</h2>
-        <%= render 'massages/massage_card_large'%>
+      <h2 id="howitworks">Comment ça marche ?</h2>
+      <div class="three-steps d-flex flex-md-row flex-column justify-content-between">
+        <!-- refacto dans une card -->
+        <div class="text-center pr-4">
+         <!--  <h3>1</h3> -->
+          <%= cl_image_tag("004-smartphone_nttmt2", width: 100, crop: :fill, class:"picto-home",effect:"colorize", color: "#ff6602") %>
+          <p><strong>Réservez un massage à domicile</strong></p>
+          <p>Vous avez peu de temps devant vous ? Nous proposons des massages à domicile ou sur votre lieu de travail.</p>
+        </div>
+        <div class="text-center">
+        <!--   <h3>2</h3> -->
+          <%= cl_image_tag("013-massage_rjd6wc", width: 100, crop: :fill, class:"picto-home", effect:"colorize", color: "#ff6602") %>
+          <p><strong>Des professionnels de confiance</strong></p>
+          <p>Tous nos massothérapeuthes sont certifiés et leur profil a été vérifié par notre plate-forme.</p>
+        </div>
+        <div class="text-center pl-4">
+      <!--     <h3>3</h3> -->
+          <%= cl_image_tag("008-customer_btmlyg", width: 100, crop: :fill, class:"picto-home", effect:"colorize", color: "#ff6602") %>
+          <p><strong>Des prestations évaluées</strong></p>
+          <p>Consultez les avis laissés sur les masseurs et laissez des commentaires après la séance de massage.</p>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <%= link_to "Voir tous les massothérapeuthes", masseurs_path, class: "btn btn-outline-success m-3"  %>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="massage-types">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 py-4">
+          <h2 id="massagetypes">Types de massage</h2>
+          <%= render 'massages/massage_card_large'%>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 

@@ -1,7 +1,10 @@
 class BookingsController < ApplicationController
 
   def new
+    @params_to_transfer = {}
     @booking = Booking.new(booking_params)
+    time = params[:time][0.. -2].to_i
+    @booking.start_date = @booking.start_date + time.hours
     @booking.massage = Massage.find_by(massage_type: params[:booking][:massage], user: User.find(params[:masseur_id]))
     @booking.user    = current_user
   end
@@ -18,9 +21,6 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to profil_path(current_user)
     else
-      # On peut supprimer les 2 lignes dessous car le rating est dans le modèle User
-      @reviews = @masseur.reviews
-      @average = @reviews.sum(&:rating) / @reviews.size.to_f
       render 'masseurs/show'
     end
   end

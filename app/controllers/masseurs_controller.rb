@@ -1,5 +1,7 @@
 class MasseursController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
+    @params_to_transfer = {}
     if params[:user].present?
       @params_to_transfer = { massage_type: params[:user][:first_name] }
       refine
@@ -18,24 +20,23 @@ class MasseursController < ApplicationController
     @masseur = User.find(params[:id])
     @reviews = @masseur.reviews
     @booking = Booking.new
-
     @price = MASSAGE_PRICE_AND_TYPE["Massage Suedois"][:price]
-
     @bookings = @masseur.bookings
-    @bookings_date = @bookings.map do |booking|
-      { from: booking.start_date, to: booking.start_date + 59.minutes }
-    end
+    @bookings_dates = @bookings.map(&:start_date)
+  end
+
+  def availablilty
   end
 
   private
 
   def availablity(masseur, date)
-    hours = (9...17).to_a
+    hours = (9...20).to_a
     bookings_select = masseur.bookings.select { |booking| booking.start_date.to_date == date.to_date }
     bookings_hours = bookings_select.map { |b| b.start_date.hour }
     p bookings_hours
-    availablity = hours.all? do |h|
-      !bookings_hours.include?(h)
+    availablity = hours.map do |h|
+      h unless bookings_hours.include?(h)
     end
     return availablity
   end
@@ -51,7 +52,7 @@ class MasseursController < ApplicationController
                                             city: "%#{params[:user][:city]}%",
                                             gender: "%#{params[:user][:gender]}%").uniq
     @masseurs = @masseurs.select { |masseur| masseur.rating.to_i >= params[:user][:last_name].to_i } if params[:user][:last_name].present?
-    @masseurs = @masseurs.select { |masseur| availablity(masseur, params[:user][:ZIP_code]) } if params[:user][:ZIP_code].present?
+    @masseurs = @masseurs.select { |masseur| !availablity(masseur, params[:user][:ZIP_code]).empty? } if params[:user][:ZIP_code].present?
     @massage_type = params[:user][:first_name]
     @city = params[:user][:city]
   end
