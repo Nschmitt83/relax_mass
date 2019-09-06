@@ -156,7 +156,7 @@ andre  = User.create!(
   last_name: "Gide",
   address: "1 bis rue Vaneau",
   ZIP_code: "75007",
-  city: "Paris",
+  city: "Lille",
   description:"Salut les potaux, moi c'est André Gide ou dédé comme vous voulez ;) J'ai eu le prix nobel, la classe, non ? Bref maintenant pour moi c'est massage, massage, massage. Je vis massage, je bois massage, je mange massage et je dors massage (quand je dors). Au plaisir de vous rencontrer",
   gender: "Homme",
   mass_or_not: true,
@@ -654,6 +654,11 @@ booking43 = Booking.create!(
   start_date: "2019-10-19 14:00:00"
 )
 
+booking44 = Booking.create!(
+  user: nicolas,
+  massage: massages25,
+  start_date: "2019-10-01 12:00:00"
+)
 puts "create reviews"
 
 review1 = Review.create!(
@@ -871,4 +876,11 @@ review32 = Review.create!(
   booking: booking32,
   rating: 1,
   content: "Je ne recommande pas du tout ce monsieur. Il a été très grossier et s'est comporté comme un vrai voyou."
+)
+
+review20 = Review.create!(
+  user: booking44.user,
+  booking: booking44,
+  rating: 4,
+  content: "Charles est un dieu vivant du massage ! Je recommande !"
 )
