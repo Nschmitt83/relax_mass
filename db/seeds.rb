@@ -156,7 +156,7 @@ andre  = User.create!(
   last_name: "Gide",
   address: "1 bis rue Vaneau",
   ZIP_code: "75007",
-  city: "Paris",
+  city: "Lille",
   description:"Salut les poteaux, moi c'est André Gide ou dédé comme vous voulez ;) J'ai eu le prix nobel, la classe, non ? Bref maintenant pour moi c'est massage, massage, massage. Je vis massage, je bois massage, je mange massage et je dors massage (quand je dors). Au plaisir de vous rencontrer",
   gender: "Homme",
   mass_or_not: true,
@@ -615,7 +615,7 @@ booking36 = Booking.create!(
 booking37 = Booking.create!(
   user: marmouz,
   massage: massages14,
-  start_date: "2019-09-17 20:00:00"
+  start_date: "2019-09-17 09:00:00"
 )
 
 booking38 = Booking.create!(
@@ -654,6 +654,67 @@ booking43 = Booking.create!(
   start_date: "2019-10-19 14:00:00"
 )
 
+booking44 = Booking.create!(
+  user: nicolas,
+  massage: massages25,
+  start_date: "2019-10-01 12:00:00"
+)
+puts "overbooker zelda"
+booking45 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 10:00:00"
+)
+booking46 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 11:00:00"
+)
+booking47 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 12:00:00"
+)
+booking48 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 13:00:00"
+)
+booking49 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 14:00:00"
+)
+booking50 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 15:00:00"
+)
+booking51 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 16:00:00"
+)
+booking52 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 17:00:00"
+)
+booking53 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 18:00:00"
+)
+booking54 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 19:00:00"
+)
+booking55 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 20:00:00"
+)
 puts "create reviews"
 
 review1 = Review.create!(
@@ -871,4 +932,11 @@ review32 = Review.create!(
   booking: booking32,
   rating: 1,
   content: "Je ne recommande pas du tout ce monsieur. Il a été très grossier et s'est comporté comme un vrai voyou."
+)
+
+review20 = Review.create!(
+  user: booking44.user,
+  booking: booking44,
+  rating: 4,
+  content: "Charles est un dieu vivant du massage ! Je recommande !"
 )

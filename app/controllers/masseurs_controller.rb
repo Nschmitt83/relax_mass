@@ -35,8 +35,8 @@ class MasseursController < ApplicationController
     bookings_select = masseur.bookings.select { |booking| booking.start_date.to_date == date.to_date }
     bookings_hours = bookings_select.map { |b| b.start_date.hour }
     p bookings_hours
-    availablity = hours.map do |h|
-      h unless bookings_hours.include?(h)
+    availablity = hours.any? do |h|
+      bookings_hours.include?(h)
     end
     return availablity
   end
@@ -52,7 +52,7 @@ class MasseursController < ApplicationController
                                             city: "%#{params[:user][:city]}%",
                                             gender: "%#{params[:user][:gender]}%").uniq
     @masseurs = @masseurs.select { |masseur| masseur.rating.to_i >= params[:user][:last_name].to_i } if params[:user][:last_name].present?
-    @masseurs = @masseurs.select { |masseur| !availablity(masseur, params[:user][:ZIP_code]).empty? } if params[:user][:ZIP_code].present?
+    @masseurs = @masseurs.select { |masseur| !availablity(masseur, params[:user][:ZIP_code]) } if params[:user][:ZIP_code].present?
     @massage_type = params[:user][:first_name]
     @city = params[:user][:city]
   end
