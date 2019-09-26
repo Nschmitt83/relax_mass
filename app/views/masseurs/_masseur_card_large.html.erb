@@ -17,7 +17,7 @@
       </div>
     </div>
     <p class="mr-3">
-      <% unless user.rating.nan? %>
+      <% unless user.rating.nil? %>
         <strong><em>Note Moyenne : <%= user.rating.round(1) %> /5</em></strong>
       <% end %>
     </p>

@@ -121,7 +121,7 @@ zelda  = User.create!(
   address: "33, mai road",
   ZIP_code: "59000",
   city: "Lille",
-  description:"Salut les aminches, c'est Zelda Fitzgerald. Je suis la femme ET la muse de mon Francis Scott de mari. Trop bien ? Mais je suis aussi une grand écrivain, ne soyez pas réducteur ! Et le jeu vidéo, ça vient aussi de moi ;) Choisissez moi pour un massage. On ne s'ennuiera pas !",
+  description:"Salut les aminches, c'est Zelda Fitzgerald. Je suis la femme ET la muse de mon Francis Scott de mari. Trop bien ? Mais je suis aussi une grande écrivaine, ne soyez pas réducteur ! Et le jeu vidéo, ça vient aussi de moi ;) Choisissez moi pour un massage. On ne s'ennuiera pas !",
   gender: "Femme",
   mass_or_not: true,
   siret: "93343440732574",
@@ -156,8 +156,8 @@ andre  = User.create!(
   last_name: "Gide",
   address: "1 bis rue Vaneau",
   ZIP_code: "75007",
-  city: "Paris",
-  description:"Salut les potaux, moi c'est André Gide ou dédé comme vous voulez ;) J'ai eu le prix nobel, la classe, non ? Bref maintenant pour moi c'est massage, massage, massage. Je vis massage, je bois massage, je mange massage et je dors massage (quand je dors). Au plaisir de vous rencontrer",
+  city: "Lille",
+  description:"Salut les poteaux, moi c'est André Gide ou dédé comme vous voulez ;) J'ai eu le prix nobel, la classe, non ? Bref maintenant pour moi c'est massage, massage, massage. Je vis massage, je bois massage, je mange massage et je dors massage (quand je dors). Au plaisir de vous rencontrer",
   gender: "Homme",
   mass_or_not: true,
   siret: "86339747427062",
@@ -199,7 +199,7 @@ michel  = User.create!(
   siret: "52753641281624",
 )
 
-url10 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567174087/m8opp7j8ba51rzv8w156_yhex4q.jpg"
+url10 = "https://res.cloudinary.com/dvmytrwrd/image/upload/v1567757626/lfolxwy6npruot1dim9l.jpg"
 michel.remote_avatar_url = url10
 michel.save!
 
@@ -318,12 +318,12 @@ massages15 = Massage.create!(
 
 massages16 = Massage.create!(
   massage_type: "Massage Suedois",
-  user: zelda
+  user: comtesse
 )
 
 massages17 = Massage.create!(
   massage_type: "Massage Californien",
-  user: comtesse
+  user: zelda
 )
 
 massages18 = Massage.create!(
@@ -333,12 +333,12 @@ massages18 = Massage.create!(
 
 massages19 = Massage.create!(
   massage_type: "Réflexologie",
-  user: comtesse
+  user: francoise
 )
 
 massages20 = Massage.create!(
   massage_type: "Shiatsu",
-  user: andre
+  user: comtesse
 )
 
 massages21 = Massage.create!(
@@ -615,7 +615,7 @@ booking36 = Booking.create!(
 booking37 = Booking.create!(
   user: marmouz,
   massage: massages14,
-  start_date: "2019-09-17 20:00:00"
+  start_date: "2019-09-17 09:00:00"
 )
 
 booking38 = Booking.create!(
@@ -654,6 +654,67 @@ booking43 = Booking.create!(
   start_date: "2019-10-19 14:00:00"
 )
 
+booking44 = Booking.create!(
+  user: nicolas,
+  massage: massages25,
+  start_date: "2019-10-01 12:00:00"
+)
+puts "overbooker zelda"
+booking45 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 10:00:00"
+)
+booking46 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 11:00:00"
+)
+booking47 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 12:00:00"
+)
+booking48 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 13:00:00"
+)
+booking49 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 14:00:00"
+)
+booking50 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 15:00:00"
+)
+booking51 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 16:00:00"
+)
+booking52 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 17:00:00"
+)
+booking53 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 18:00:00"
+)
+booking54 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 19:00:00"
+)
+booking55 = Booking.create!(
+  user: marmouz,
+  massage: massages14,
+  start_date: "2019-09-17 20:00:00"
+)
 puts "create reviews"
 
 review1 = Review.create!(
@@ -727,7 +788,7 @@ review11 = Review.create!(
   user: booking11.user,
   booking: booking11,
   rating: 4,
-  content: "Trop bien, les pierres étaient pile à la bonne température. Simplement Zelda ne parle pas français. C'étaait dur de communiquer"
+  content: "Trop bien, les pierres étaient pile à la bonne température. Simplement Zelda ne parle pas français. C'était dur de communiquer"
 )
 
 review12 = Review.create!(
@@ -754,7 +815,7 @@ review15 = Review.create!(
   user: booking15.user,
   booking: booking15,
   rating: 4,
-  content: "Les pierres de la comtesse était bien chaudes. J'étais ravie !"
+  content: "Les pierres de la comtesse étaient bien chaudes. J'étais ravie !"
 )
 
 review16 = Review.create!(
@@ -768,7 +829,7 @@ review17 = Review.create!(
   user: booking17.user,
   booking: booking17,
   rating: 5,
-  content: "André est divin. Ses massages sont des oeuvres d'arts"
+  content: "André est divin. Ses massages sont des oeuvres d'art"
 )
 
 review18 = Review.create!(
@@ -823,7 +884,7 @@ review25 = Review.create!(
   user: booking25.user,
   booking: booking25,
   rating: 3,
-  content: "Un peu moins bien la dernière fois. Michel a allumé un clop pendant le massage. Sinon, que du bonheur..."
+  content: "Un peu moins bien la dernière fois. Michel a allumé un clope pendant le massage. Sinon, que du bonheur..."
 )
 
 review26 = Review.create!(
@@ -836,7 +897,7 @@ review27 = Review.create!(
   user: booking27.user,
   booking: booking27,
   rating: 5,
-  content: "C'était juste 'WAH' !"
+  content: "C'était juste 'WAOUH' !"
 )
 
 review28 = Review.create!(
@@ -871,4 +932,11 @@ review32 = Review.create!(
   booking: booking32,
   rating: 1,
   content: "Je ne recommande pas du tout ce monsieur. Il a été très grossier et s'est comporté comme un vrai voyou."
+)
+
+review20 = Review.create!(
+  user: booking44.user,
+  booking: booking44,
+  rating: 4,
+  content: "Charles est un dieu vivant du massage ! Je recommande !"
 )

@@ -16,7 +16,7 @@ class User < ApplicationRecord
   validates :gender, inclusion: { in: GENRE }
 
   def rating
-    self.reviews.sum(&:rating) / self.reviews.size.to_f
+    self.reviews.sum(&:rating) / self.reviews.size.to_f unless reviews.blank?
   end
 
   def bookings

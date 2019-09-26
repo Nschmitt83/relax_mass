@@ -1,7 +1,7 @@
 <div class="notifications_all card my-3 p-4">
   <h2 class="text-center my-2">Avis</h2>
-  <% unless reviews.blank? %>
-    <% reviews.each do |review| %>
+  <% reviews.each do |review| %>
+    <% unless review.blank? %>
       <%= render 'reviews/reviews_details_card', review: review %>
     <% end %>
   <% end %>

@@ -19,7 +19,7 @@
           </div>
           <div class="col">
             <%= label_tag(:capital, "SIRET :") %>
-            <%= text_field(:user, :siret, value: current_user.siret, class: "form-control", length: 14) %>
+            <%= text_field(:user, :siret, value: current_user.siret, class: "form-control", minlength: 14, maxlength: 14) %>
           </div>
         </div>
 
