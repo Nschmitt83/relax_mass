@@ -108,7 +108,7 @@ GEM
     mimemagic (0.3.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.12.2)
+    minitest (5.13.0)
     monetize (1.9.2)
       money (~> 6.12)
     money (6.13.4)
@@ -187,7 +187,7 @@ GEM
       tilt
     simple_calendar (2.3.0)
       rails (>= 3.0)
-    simple_form (4.1.0)
+    simple_form (5.0.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
     spring (2.1.0)
